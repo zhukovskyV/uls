@@ -2,16 +2,9 @@
 
 char *mx_mychmod(int mode, char *str, char *dir_mame) {
     acl_t acl = NULL;
-    // acl_entry_t enter;
     ssize_t xattr = 0;
 
     mx_strcpy(str,"-----------");
-    // acl = acl_get_link_np(dir_mame, ACL_TYPE_EXTENDED);
-    // if (acl && acl_get_entry(acl, ACL_FIRST_ENTRY, &enter) == -1) {
-    //     acl_free(acl);
-    //     acl = NULL;
-    // }
-
     xattr = listxattr(dir_mame, NULL, 0, XATTR_NOFOLLOW);
     if(S_ISDIR(mode))str[0]='d';
     if(S_ISCHR(mode))str[0]='c';

@@ -2,19 +2,29 @@ NAME = uls
 
 INC = uls.h
 
-SRC = 	mx_mychmod.c \
-		mx_print_spaces.c \
-		mx_substr.c \
-		vivod.c \
-		mx_intlen.c \
-	
+SRC = main.c \
+	mx_recursion_flag.c \
+	mx_basic_print.c \
+	mx_valid_flags.c \
+	mx_flag_m.c \
+	mx_elem_in_dir.c \
+	mx_flag_l.c \
+	mx_print_spaces.c \
+	mx_substr.c \
+	mx_intlen.c \
+	mx_mychmod.c \
 
-OBJ = 	mx_mychmod.o \
-		mx_print_spaces.o \
-		mx_substr.o \
-		vivod.o \
-		mx_intlen.o \
-
+OBJ = main.o \
+	mx_recursion_flag.o \
+	mx_basic_print.o \
+	mx_valid_flags.o \
+	mx_flag_m.o \
+	mx_elem_in_dir.o \
+	mx_flag_l.o \
+	mx_print_spaces.o \
+	mx_substr.o \
+	mx_intlen.o \
+	mx_mychmod.o \
 
 CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic
 
