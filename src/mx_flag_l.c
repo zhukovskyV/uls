@@ -1,5 +1,7 @@
 #include "uls.h"
 
+static void mx_itoa_to_string(unsigned int number, int n);
+
 void filling_struct(t_len_column *lens, struct stat buff) {
     struct passwd *userinfo = NULL;
     struct group *groupinfo;
@@ -13,10 +15,10 @@ void filling_struct(t_len_column *lens, struct stat buff) {
     if (groupinfo != NULL) {
         if (lens->len_gid < mx_strlen(groupinfo->gr_name))
             lens->len_gid = mx_strlen(groupinfo->gr_name);
+        else if (lens->len_gid < mx_intlen(userinfo->pw_gid))
+                lens->len_gid = mx_intlen(userinfo->pw_gid);
     }
-    else
-        if (lens->len_gid < mx_intlen(userinfo->pw_gid))
-            lens->len_gid = mx_intlen(userinfo->pw_gid);
+
     if (lens->len_size < mx_intlen(buff.st_size))
        lens->len_size = mx_intlen(buff.st_size);
 }
@@ -36,25 +38,28 @@ void len_difference(t_diff_len *l, t_len_column *lens, struct stat buff) {
     userinfo = getpwuid(buff.st_uid);
     if (lens->len_user >= mx_strlen(userinfo->pw_name))
         l->diff_user -= mx_strlen(userinfo->pw_name);
+    groupinfo = getgrgid(buff.st_gid);
     if (groupinfo != NULL) {
         if (lens->len_gid >= mx_strlen(groupinfo->gr_name))
             l->diff_gid -= mx_strlen(groupinfo->gr_name);
-    }
-    else
-        if (lens->len_gid >= mx_intlen(userinfo->pw_gid))
+        else if (lens->len_gid >= mx_intlen(userinfo->pw_gid))
             l->diff_gid -= mx_intlen(userinfo->pw_gid);
+    }
 }
 
-char **mx_make_path1(char **dirs_in, char *dir_name, int dir_count) {
+char **mx_find_path1(char **dirs_in, char *dir_name, int dir_count) {
     char **path = (char **)malloc(sizeof(char *) * (dir_count + 1));
     char *tmp = NULL;
-
-    for (int i = 0; dirs_in[i]; i++) {
+    if (dir_name == NULL)
+        return dirs_in;
+    for (int i = 0; i <= dir_count; i++) {
         if (mx_strcmp(dir_name, "/") == 0)
             tmp = mx_strdup(dir_name);
         else
             tmp = mx_strjoin(dir_name, "/");
         path[i] = mx_strjoin(tmp, dirs_in[i]);
+        // printf(" >>>> %s\n", path[i]);
+        // printf(" >>>>%d\n", dir_count);
         if (tmp != NULL)
            free(tmp);
     }
@@ -65,33 +70,50 @@ char **mx_make_path1(char **dirs_in, char *dir_name, int dir_count) {
 void total_blocks(char **files_in_dir, t_len_column *lens, char *dir_name, int count) {
     struct stat buff;
     long long total = 0;
+    char **path = NULL;
 
     mx_memset(lens, 0, sizeof(t_len_column));
-    char **path = mx_make_path1(files_in_dir, dir_name, count);
+    if (dir_name != NULL)
+        path = mx_find_path1(files_in_dir, dir_name, count);
 
-        printf("%s <<<<<<<<<<<<<<<<<\n\n", path[0]);
+        // printf("%s <<<<<<<<<<<<<<<<<\n\n", path[0]);
     for (int i = 0; path[i]; i++) {
-        printf("%s\n", path[i]);
-        if (lstat(path[i], &buff) >= 0) {
-            filling_struct(lens, buff);
-       	    total += buff.st_blocks;
-        }
+        // printf("%s\n", path[i]);
+        if (dir_name != NULL)
+            lstat(path[i], &buff);
+        else
+            lstat(files_in_dir[i], &buff); 
+        filling_struct(lens, buff);
+       	total += buff.st_blocks;
+
     } 
     mx_printstr("total ");
     mx_printint(total);
     mx_printchar('\n');
-    }
+}
 
+void my_getgrgid(char *filename, int n) {
+    struct group *groupinfo;
+    struct stat buff;
+
+    lstat(filename, &buff);
+    groupinfo = getgrgid(buff.st_gid);
+    if (groupinfo != NULL) {
+        mx_printstr(groupinfo->gr_name);
+        mx_print_spaces(n);
+        mx_print_spaces(1);
+    }
+    else
+        mx_itoa_to_string(buff.st_gid, n);
+}
 
 void my_getuid(char *filename, int n) {
     struct passwd *userinfo = NULL;
-    // struct group *groupinfo;
     uid_t userid;
     struct stat buff;
 
     lstat(filename, &buff);
     userid = buff.st_uid;
-    // groupinfo = getgrgid(buff.st_gid);
     userinfo = getpwuid(userid);
     if (userinfo != NULL) {
         mx_printstr(userinfo->pw_name);
@@ -137,12 +159,16 @@ void my_time(char *filename) {
 
 void mx_flag_l(char **files_in_dir, int count, char *dir_name) {
     char pr_dost[12];
+    char ayaya[1024]; // <3 twitch
     struct stat buff;
     t_len_column *lens = (t_len_column *)malloc(sizeof(t_len_column));
     t_diff_len *l = (t_diff_len *)malloc(sizeof(t_diff_len));
+    char **path = NULL;
 
-    printf("error");
-    char **path = mx_make_path1(files_in_dir, dir_name, count);
+    if (dir_name != NULL)
+        path = mx_find_path1(files_in_dir, dir_name, count);
+    else
+        path = mx_find_path1(files_in_dir, ".", 1);
     total_blocks(files_in_dir, lens, dir_name, count);
     for (int i = 0; path[i]; i++) {
         lstat(path[i], &buff);
@@ -151,58 +177,27 @@ void mx_flag_l(char **files_in_dir, int count, char *dir_name) {
         mx_print_spaces(1);
         mx_itoa_to_string(buff.st_nlink, l->diff_link);
         my_getuid(path[i], l->diff_user);
-        mx_itoa_to_string(buff.st_gid, l->diff_gid);
+        my_getgrgid(path[i], l->diff_gid);
         mx_itoa_to_string(buff.st_size, l->diff_size + 1);
         my_time(path[i]);
         mx_printstr(files_in_dir[i]);
+        if (pr_dost[0] == 'l')
+            readlink(path[i], ayaya, 1024);
+        if (ayaya[0] != '\0') {
+            mx_printstr(" -> ");
+            mx_printstr(ayaya);
+        }
         mx_printchar('\n');
+        mx_bzero(ayaya, sizeof(ayaya));
+        // ayaya[0] = '\0';
+        // bzero(lin, sizeof(lin));
     }
-        printf("size link %d\n", lens->len_link);
-        printf("size size %d\n", lens->len_size);
-        printf("size user %d\n", lens->len_user);
-        printf("size gid  %d\n",lens->len_gid);
+        // printf("size link %d\n", lens->len_link);
+        // printf("size size %d\n", lens->len_size);
+        // printf("size user %d\n", lens->len_user);
+        // printf("size gid  %d || ",lens->len_gid);
+        // printf("diff gid  %d\n",l->diff_gid);
+    // system("leaks uls");
 }
 
-// int main(int ac, char **av) {
-//     char pr_dost[12];
-//     DIR *dp;
-//     struct dirent *dirp;
-//     struct stat buff;
-//     t_len_column *lens = (t_len_column *)malloc(sizeof(t_len_column));
-//     t_diff_len *l = (t_diff_len *)malloc(sizeof(t_diff_len));
-//     // struct passwd *user;
-//     // int tmp;
-//     //user = getpwuid(getuid()/*buff.st_uid*/);
-//     if (ac != 2) {
-//         printf("че, ахуел сука?!");
-//         exit(0);
-//     }
-//     if ((dp = opendir(av[1])) == NULL) {
-//         printf("вафел %s\n", av[1]);
-//         exit(0);
-//     }
-//     total_blocks(av[1], lens);                                          // ____________________
-//     while ((dirp = readdir(dp)) != NULL) {                              //|<--* readdir было   |
-//         lstat(dirp->d_name, &buff);                                     //|  не лучшей идеей   |
-//         len_difference(l, lens, buff);                                  //|          :(        |
-//         mx_printstr(mx_mychmod(buff.st_mode, pr_dost, dirp->d_name));   //|____________________|
-//         mx_print_spaces(1);
-//         mx_itoa_to_string(buff.st_nlink, l->diff_link);
-//         //my_getuid(dirp->d_name, l->diff_user); // эта хрень все ломает;
-//         mx_itoa_to_string(buff.st_gid, 0);
-//         mx_print_spaces(1);
-//         mx_itoa_to_string(buff.st_size, l->diff_size);
-// 		   my_time(dirp->d_name);
-//         mx_printstr(dirp->d_name);
-//         mx_printchar('\n');
-//     }
-//     closedir(dp);
-//     // printf("\ncolumn lens =\n");
-//     // printf("sizes %d\n", lens->len_size);
-//     // printf("links %d\n", lens->len_link);
-//     // printf("user len %d\n", lens->len_user);
-//     // printf("gid %d\n", lens->len_gid);
-//     system("leaks -q uls");
-//     exit(0);
-// }
 

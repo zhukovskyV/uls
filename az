@@ -1,0 +1,919 @@
+/usr/lib:
+ >>>> /usr/lib/ACIPCBTLib.dylib
+ >>>> /usr/lib/AppleConvergedTransport.dylib
+ >>>> /usr/lib/PN548.dylib
+ >>>> /usr/lib/PN548_API.dylib
+ >>>> /usr/lib/PN548_HAL.dylib
+ >>>> /usr/lib/charset.alias
+ >>>> /usr/lib/cron
+ >>>> /usr/lib/dtrace
+ >>>> /usr/lib/dyld
+ >>>> /usr/lib/groff
+ >>>> /usr/lib/libATCommandStudioDynamic.dylib
+ >>>> /usr/lib/libAccessibility.dylib
+ >>>> /usr/lib/libAccountPolicyTranslation.dylib
+ >>>> /usr/lib/libAppleSSEExt.dylib
+ >>>> /usr/lib/libAppletTranslationLibrary.dylib
+ >>>> /usr/lib/libAudioIssueDetector.dylib
+ >>>> /usr/lib/libAudioStatistics.dylib
+ >>>> /usr/lib/libBSDPClient.A.dylib
+ >>>> /usr/lib/libBSDPClient.dylib
+ >>>> /usr/lib/libCRFSuite.dylib
+ >>>> /usr/lib/libCRFSuite0.12.dylib
+ >>>> /usr/lib/libCTGreenTeaLogger.dylib
+ >>>> /usr/lib/libChineseTokenizer.dylib
+ >>>> /usr/lib/libCoreStorage.dylib
+ >>>> /usr/lib/libDHCPServer.A.dylib
+ >>>> /usr/lib/libDHCPServer.dylib
+ >>>> /usr/lib/libDiagnosticMessagesClient.dylib
+ >>>> /usr/lib/libFDR_osx.dylib
+ >>>> /usr/lib/libFosl_dynamic.dylib
+ >>>> /usr/lib/libIASAuthReboot.dylib
+ >>>> /usr/lib/libIASUnifiedProgress.dylib
+ >>>> /usr/lib/libMatch.1.dylib
+ >>>> /usr/lib/libMatch.dylib
+ >>>> /usr/lib/libMaxEnt.dylib
+ >>>> /usr/lib/libMemoryResourceException.dylib
+ >>>> /usr/lib/libMobileGestalt.dylib
+ >>>> /usr/lib/libOpenScriptingUtil.dylib
+ >>>> /usr/lib/libParallelCompression.dylib
+ >>>> /usr/lib/libQMIParserDynamic.dylib
+ >>>> /usr/lib/libSMC.dylib
+ >>>> /usr/lib/libScreenReader.dylib
+ >>>> /usr/lib/libSystem.B.dylib
+ >>>> /usr/lib/libSystem.dylib
+ >>>> /usr/lib/libTelephonyUtilDynamic.dylib
+ >>>> /usr/lib/libThaiTokenizer.dylib
+ >>>> /usr/lib/libUniversalAccess.dylib
+ >>>> /usr/lib/libXSEvent.dylib
+ >>>> /usr/lib/libXplugin.1.dylib
+ >>>> /usr/lib/libXplugin.dylib
+ >>>> /usr/lib/libapple_nghttp2.dylib
+ >>>> /usr/lib/libapr-1.0.dylib
+ >>>> /usr/lib/libapr-1.dylib
+ >>>> /usr/lib/libaprutil-1.0.dylib
+ >>>> /usr/lib/libaprutil-1.dylib
+ >>>> /usr/lib/libarchive.2.dylib
+ >>>> /usr/lib/libarchive.dylib
+ >>>> /usr/lib/libate.dylib
+ >>>> /usr/lib/libauditd.0.dylib
+ >>>> /usr/lib/libauditd.dylib
+ >>>> /usr/lib/libauto.dylib
+ >>>> /usr/lib/libblas.dylib
+ >>>> /usr/lib/libboringssl.dylib
+ >>>> /usr/lib/libbsm.0.dylib
+ >>>> /usr/lib/libbsm.dylib
+ >>>> /usr/lib/libbz2.1.0.5.dylib
+ >>>> /usr/lib/libbz2.1.0.dylib
+ >>>> /usr/lib/libbz2.dylib
+ >>>> /usr/lib/libc++.1.dylib
+ >>>> /usr/lib/libc++.dylib
+ >>>> /usr/lib/libc++abi.dylib
+ >>>> /usr/lib/libc.dylib
+ >>>> /usr/lib/libcblas.dylib
+ >>>> /usr/lib/libcharset.1.0.0.dylib
+ >>>> /usr/lib/libcharset.1.dylib
+ >>>> /usr/lib/libcharset.dylib
+ >>>> /usr/lib/libclapack.dylib
+ >>>> /usr/lib/libcmph.dylib
+ >>>> /usr/lib/libcom_err.dylib
+ >>>> /usr/lib/libcompression.dylib
+ >>>> /usr/lib/libcoreroutine.dylib
+ >>>> /usr/lib/libcoretls.dylib
+ >>>> /usr/lib/libcoretls_cfhelpers.dylib
+ >>>> /usr/lib/libcrypto.0.9.7.dylib
+ >>>> /usr/lib/libcrypto.0.9.8.dylib
+ >>>> /usr/lib/libcrypto.35.dylib
+ >>>> /usr/lib/libcrypto.41.dylib
+ >>>> /usr/lib/libcrypto.42.dylib
+ >>>> /usr/lib/libcrypto.dylib
+ >>>> /usr/lib/libcsfde.dylib
+ >>>> /usr/lib/libcupolicy.dylib
+ >>>> /usr/lib/libcups.2.dylib
+ >>>> /usr/lib/libcups.dylib
+ >>>> /usr/lib/libcupscgi.1.dylib
+ >>>> /usr/lib/libcupscgi.dylib
+ >>>> /usr/lib/libcupsimage.2.dylib
+ >>>> /usr/lib/libcupsimage.dylib
+ >>>> /usr/lib/libcupsmime.1.dylib
+ >>>> /usr/lib/libcupsmime.dylib
+ >>>> /usr/lib/libcupsppdc.1.dylib
+ >>>> /usr/lib/libcupsppdc.dylib
+ >>>> /usr/lib/libcurl.3.dylib
+ >>>> /usr/lib/libcurl.4.dylib
+ >>>> /usr/lib/libcurl.dylib
+ >>>> /usr/lib/libcurses.dylib
+ >>>> /usr/lib/libdbm.dylib
+ >>>> /usr/lib/libdes425.dylib
+ >>>> /usr/lib/libdl.dylib
+ >>>> /usr/lib/libdns_services.dylib
+ >>>> /usr/lib/libdscsym.dylib
+ >>>> /usr/lib/libdtrace.dylib
+ >>>> /usr/lib/libdz.dylib
+ >>>> /usr/lib/libeasyperf.dylib
+ >>>> /usr/lib/libecpg.6.5.dylib
+ >>>> /usr/lib/libecpg.6.dylib
+ >>>> /usr/lib/libecpg.dylib
+ >>>> /usr/lib/libecpg_compat.3.5.dylib
+ >>>> /usr/lib/libecpg_compat.3.dylib
+ >>>> /usr/lib/libecpg_compat.dylib
+ >>>> /usr/lib/libedit.2.dylib
+ >>>> /usr/lib/libedit.3.0.dylib
+ >>>> /usr/lib/libedit.3.dylib
+ >>>> /usr/lib/libedit.dylib
+ >>>> /usr/lib/libenergytrace.dylib
+ >>>> /usr/lib/libexpat.1.dylib
+ >>>> /usr/lib/libexpat.dylib
+ >>>> /usr/lib/libexslt.0.dylib
+ >>>> /usr/lib/libexslt.dylib
+ >>>> /usr/lib/libextension.dylib
+ >>>> /usr/lib/libf77lapack.dylib
+ >>>> /usr/lib/libffi.dylib
+ >>>> /usr/lib/libform.5.4.dylib
+ >>>> /usr/lib/libform.dylib
+ >>>> /usr/lib/libgcc_s.1.dylib
+ >>>> /usr/lib/libgermantok.dylib
+ >>>> /usr/lib/libgmalloc.dylib
+ >>>> /usr/lib/libgssapi_krb5.dylib
+ >>>> /usr/lib/libgutenprint.2.dylib
+ >>>> /usr/lib/libheimdal-asn1.dylib
+ >>>> /usr/lib/libhunspell-1.2.0.0.0.dylib
+ >>>> /usr/lib/libhunspell-1.2.0.dylib
+ >>>> /usr/lib/libhunspell-1.2.dylib
+ >>>> /usr/lib/libiconv.2.4.0.dylib
+ >>>> /usr/lib/libiconv.2.dylib
+ >>>> /usr/lib/libiconv.dylib
+ >>>> /usr/lib/libicucore.A.dylib
+ >>>> /usr/lib/libicucore.dylib
+ >>>> /usr/lib/libinfo.dylib
+ >>>> /usr/lib/libiodbc.2.1.18.dylib
+ >>>> /usr/lib/libiodbc.2.dylib
+ >>>> /usr/lib/libiodbc.dylib
+ >>>> /usr/lib/libiodbcinst.2.1.18.dylib
+ >>>> /usr/lib/libiodbcinst.2.dylib
+ >>>> /usr/lib/libiodbcinst.dylib
+ >>>> /usr/lib/libipconfig.dylib
+ >>>> /usr/lib/libipsec.A.dylib
+ >>>> /usr/lib/libipsec.dylib
+ >>>> /usr/lib/libk5crypto.dylib
+ >>>> /usr/lib/libkrb4.dylib
+ >>>> /usr/lib/libkrb5.dylib
+ >>>> /usr/lib/libkrb524.dylib
+ >>>> /usr/lib/libkrb5support.dylib
+ >>>> /usr/lib/libktrace.dylib
+ >>>> /usr/lib/liblangid.dylib
+ >>>> /usr/lib/liblapack.dylib
+ >>>> /usr/lib/liblber.dylib
+ >>>> /usr/lib/libldap.dylib
+ >>>> /usr/lib/libldap_r.dylib
+ >>>> /usr/lib/liblzma.5.dylib
+ >>>> /usr/lib/liblzma.dylib
+ >>>> /usr/lib/libm.dylib
+ >>>> /usr/lib/libmarisa.dylib
+ >>>> /usr/lib/libmecab.1.0.0.dylib
+ >>>> /usr/lib/libmecab.dylib
+ >>>> /usr/lib/libmecabra.dylib
+ >>>> /usr/lib/libmenu.5.4.dylib
+ >>>> /usr/lib/libmenu.dylib
+ >>>> /usr/lib/libmx.A.dylib
+ >>>> /usr/lib/libmx.dylib
+ >>>> /usr/lib/libncurses.5.4.dylib
+ >>>> /usr/lib/libncurses.5.dylib
+ >>>> /usr/lib/libncurses.dylib
+ >>>> /usr/lib/libnetsnmp.15.1.2.dylib
+ >>>> /usr/lib/libnetsnmp.15.dylib
+ >>>> /usr/lib/libnetsnmp.25.dylib
+ >>>> /usr/lib/libnetsnmp.5.2.1.dylib
+ >>>> /usr/lib/libnetsnmp.5.dylib
+ >>>> /usr/lib/libnetsnmp.dylib
+ >>>> /usr/lib/libnetsnmpagent.25.dylib
+ >>>> /usr/lib/libnetsnmpagent.dylib
+ >>>> /usr/lib/libnetsnmphelpers.25.dylib
+ >>>> /usr/lib/libnetsnmphelpers.dylib
+ >>>> /usr/lib/libnetsnmpmibs.25.dylib
+ >>>> /usr/lib/libnetsnmpmibs.dylib
+ >>>> /usr/lib/libnetsnmptrapd.25.dylib
+ >>>> /usr/lib/libnetsnmptrapd.dylib
+ >>>> /usr/lib/libnetwork.dylib
+ >>>> /usr/lib/libnetworkextension.dylib
+ >>>> /usr/lib/libnfrestore.dylib
+ >>>> /usr/lib/libnfshared.dylib
+ >>>> /usr/lib/libobjc-trampolines.dylib
+ >>>> /usr/lib/libobjc.A.dylib
+ >>>> /usr/lib/libobjc.dylib
+ >>>> /usr/lib/libodfde.dylib
+ >>>> /usr/lib/libodmodule.dylib
+ >>>> /usr/lib/libpam.1.dylib
+ >>>> /usr/lib/libpam.2.dylib
+ >>>> /usr/lib/libpam.dylib
+ >>>> /usr/lib/libpanel.5.4.dylib
+ >>>> /usr/lib/libpanel.dylib
+ >>>> /usr/lib/libpcap.A.dylib
+ >>>> /usr/lib/libpcap.dylib
+ >>>> /usr/lib/libpcre.0.dylib
+ >>>> /usr/lib/libpcre.dylib
+ >>>> /usr/lib/libpcreposix.0.dylib
+ >>>> /usr/lib/libpcreposix.dylib
+ >>>> /usr/lib/libperfcheck.dylib
+ >>>> /usr/lib/libpgtypes.3.4.dylib
+ >>>> /usr/lib/libpgtypes.3.dylib
+ >>>> /usr/lib/libpgtypes.dylib
+ >>>> /usr/lib/libpmenergy.dylib
+ >>>> /usr/lib/libpmsample.dylib
+ >>>> /usr/lib/libpoll.dylib
+ >>>> /usr/lib/libpq.5.6.dylib
+ >>>> /usr/lib/libpq.5.dylib
+ >>>> /usr/lib/libpq.dylib
+ >>>> /usr/lib/libprequelite.dylib
+ >>>> /usr/lib/libproc.dylib
+ >>>> /usr/lib/libpthread.dylib
+ >>>> /usr/lib/libpython.dylib
+ >>>> /usr/lib/libpython2.7.dylib
+ >>>> /usr/lib/libquic.dylib
+ >>>> /usr/lib/libquit.dylib
+ >>>> /usr/lib/libreadline.dylib
+ >>>> /usr/lib/libresolv.9.dylib
+ >>>> /usr/lib/libresolv.dylib
+ >>>> /usr/lib/librpcsvc.dylib
+ >>>> /usr/lib/libruby.2.3.0.dylib
+ >>>> /usr/lib/libruby.2.3.dylib
+ >>>> /usr/lib/libruby.dylib
+ >>>> /usr/lib/libsandbox.1.dylib
+ >>>> /usr/lib/libsandbox.dylib
+ >>>> /usr/lib/libsasl2.2.0.1.dylib
+ >>>> /usr/lib/libsasl2.2.0.15.dylib
+ >>>> /usr/lib/libsasl2.2.0.21.dylib
+ >>>> /usr/lib/libsasl2.2.0.22.dylib
+ >>>> /usr/lib/libsasl2.2.dylib
+ >>>> /usr/lib/libsasl2.dylib
+ >>>> /usr/lib/libspindump.dylib
+ >>>> /usr/lib/libsqlite3.0.dylib
+ >>>> /usr/lib/libsqlite3.dylib
+ >>>> /usr/lib/libssl.0.9.7.dylib
+ >>>> /usr/lib/libssl.0.9.8.dylib
+ >>>> /usr/lib/libssl.35.dylib
+ >>>> /usr/lib/libssl.43.dylib
+ >>>> /usr/lib/libssl.44.dylib
+ >>>> /usr/lib/libssl.dylib
+ >>>> /usr/lib/libstdc++.6.0.9.dylib
+ >>>> /usr/lib/libstdc++.6.dylib
+ >>>> /usr/lib/libstdc++.dylib
+ >>>> /usr/lib/libsysdiagnose.dylib
+ >>>> /usr/lib/libsysmon.dylib
+ >>>> /usr/lib/libsystemstats.dylib
+ >>>> /usr/lib/libtailspin.dylib
+ >>>> /usr/lib/libtcl.dylib
+ >>>> /usr/lib/libtcl8.5.dylib
+ >>>> /usr/lib/libtermcap.dylib
+ >>>> /usr/lib/libtidy.A.dylib
+ >>>> /usr/lib/libtidy.dylib
+ >>>> /usr/lib/libtk.dylib
+ >>>> /usr/lib/libtk8.5.dylib
+ >>>> /usr/lib/libtls.15.dylib
+ >>>> /usr/lib/libtls.16.dylib
+ >>>> /usr/lib/libtls.6.dylib
+ >>>> /usr/lib/libtls.dylib
+ >>>> /usr/lib/libtzupdate.dylib
+ >>>> /usr/lib/libusrtcp.dylib
+ >>>> /usr/lib/libutil.dylib
+ >>>> /usr/lib/libutil1.0.dylib
+ >>>> /usr/lib/libxar.1.dylib
+ >>>> /usr/lib/libxar.dylib
+ >>>> /usr/lib/libxcselect.dylib
+ >>>> /usr/lib/libxml2.2.dylib
+ >>>> /usr/lib/libxml2.dylib
+ >>>> /usr/lib/libxslt.1.dylib
+ >>>> /usr/lib/libxslt.dylib
+ >>>> /usr/lib/libz.1.1.3.dylib
+ >>>> /usr/lib/libz.1.2.11.dylib
+ >>>> /usr/lib/libz.1.2.5.dylib
+ >>>> /usr/lib/libz.1.2.8.dylib
+ >>>> /usr/lib/libz.1.dylib
+ >>>> /usr/lib/libz.dylib
+ >>>> /usr/lib/log
+ >>>> /usr/lib/pam
+ >>>> /usr/lib/php
+ >>>> /usr/lib/pkgconfig
+ >>>> /usr/lib/python2.7
+ >>>> /usr/lib/rpcsvc
+ >>>> /usr/lib/ruby
+ >>>> /usr/lib/sasl2
+ >>>> /usr/lib/sqlite3
+ >>>> /usr/lib/ssh-keychain.dylib
+ >>>> /usr/lib/swift
+ >>>> /usr/lib/system
+ >>>> /usr/lib/xpc
+ >>>> /usr/lib/zsh
+ >>>> /usr/lib/
+ >>>> /usr/lib/ACIPCBTLib.dylib
+ >>>> /usr/lib/AppleConvergedTransport.dylib
+ >>>> /usr/lib/PN548.dylib
+ >>>> /usr/lib/PN548_API.dylib
+ >>>> /usr/lib/PN548_HAL.dylib
+ >>>> /usr/lib/charset.alias
+ >>>> /usr/lib/cron
+ >>>> /usr/lib/dtrace
+ >>>> /usr/lib/dyld
+ >>>> /usr/lib/groff
+ >>>> /usr/lib/libATCommandStudioDynamic.dylib
+ >>>> /usr/lib/libAccessibility.dylib
+ >>>> /usr/lib/libAccountPolicyTranslation.dylib
+ >>>> /usr/lib/libAppleSSEExt.dylib
+ >>>> /usr/lib/libAppletTranslationLibrary.dylib
+ >>>> /usr/lib/libAudioIssueDetector.dylib
+ >>>> /usr/lib/libAudioStatistics.dylib
+ >>>> /usr/lib/libBSDPClient.A.dylib
+ >>>> /usr/lib/libBSDPClient.dylib
+ >>>> /usr/lib/libCRFSuite.dylib
+ >>>> /usr/lib/libCRFSuite0.12.dylib
+ >>>> /usr/lib/libCTGreenTeaLogger.dylib
+ >>>> /usr/lib/libChineseTokenizer.dylib
+ >>>> /usr/lib/libCoreStorage.dylib
+ >>>> /usr/lib/libDHCPServer.A.dylib
+ >>>> /usr/lib/libDHCPServer.dylib
+ >>>> /usr/lib/libDiagnosticMessagesClient.dylib
+ >>>> /usr/lib/libFDR_osx.dylib
+ >>>> /usr/lib/libFosl_dynamic.dylib
+ >>>> /usr/lib/libIASAuthReboot.dylib
+ >>>> /usr/lib/libIASUnifiedProgress.dylib
+ >>>> /usr/lib/libMatch.1.dylib
+ >>>> /usr/lib/libMatch.dylib
+ >>>> /usr/lib/libMaxEnt.dylib
+ >>>> /usr/lib/libMemoryResourceException.dylib
+ >>>> /usr/lib/libMobileGestalt.dylib
+ >>>> /usr/lib/libOpenScriptingUtil.dylib
+ >>>> /usr/lib/libParallelCompression.dylib
+ >>>> /usr/lib/libQMIParserDynamic.dylib
+ >>>> /usr/lib/libSMC.dylib
+ >>>> /usr/lib/libScreenReader.dylib
+ >>>> /usr/lib/libSystem.B.dylib
+ >>>> /usr/lib/libSystem.dylib
+ >>>> /usr/lib/libTelephonyUtilDynamic.dylib
+ >>>> /usr/lib/libThaiTokenizer.dylib
+ >>>> /usr/lib/libUniversalAccess.dylib
+ >>>> /usr/lib/libXSEvent.dylib
+ >>>> /usr/lib/libXplugin.1.dylib
+ >>>> /usr/lib/libXplugin.dylib
+ >>>> /usr/lib/libapple_nghttp2.dylib
+ >>>> /usr/lib/libapr-1.0.dylib
+ >>>> /usr/lib/libapr-1.dylib
+ >>>> /usr/lib/libaprutil-1.0.dylib
+ >>>> /usr/lib/libaprutil-1.dylib
+ >>>> /usr/lib/libarchive.2.dylib
+ >>>> /usr/lib/libarchive.dylib
+ >>>> /usr/lib/libate.dylib
+ >>>> /usr/lib/libauditd.0.dylib
+ >>>> /usr/lib/libauditd.dylib
+ >>>> /usr/lib/libauto.dylib
+ >>>> /usr/lib/libblas.dylib
+ >>>> /usr/lib/libboringssl.dylib
+ >>>> /usr/lib/libbsm.0.dylib
+ >>>> /usr/lib/libbsm.dylib
+ >>>> /usr/lib/libbz2.1.0.5.dylib
+ >>>> /usr/lib/libbz2.1.0.dylib
+ >>>> /usr/lib/libbz2.dylib
+ >>>> /usr/lib/libc++.1.dylib
+ >>>> /usr/lib/libc++.dylib
+ >>>> /usr/lib/libc++abi.dylib
+ >>>> /usr/lib/libc.dylib
+ >>>> /usr/lib/libcblas.dylib
+ >>>> /usr/lib/libcharset.1.0.0.dylib
+ >>>> /usr/lib/libcharset.1.dylib
+ >>>> /usr/lib/libcharset.dylib
+ >>>> /usr/lib/libclapack.dylib
+ >>>> /usr/lib/libcmph.dylib
+ >>>> /usr/lib/libcom_err.dylib
+ >>>> /usr/lib/libcompression.dylib
+ >>>> /usr/lib/libcoreroutine.dylib
+ >>>> /usr/lib/libcoretls.dylib
+ >>>> /usr/lib/libcoretls_cfhelpers.dylib
+ >>>> /usr/lib/libcrypto.0.9.7.dylib
+ >>>> /usr/lib/libcrypto.0.9.8.dylib
+ >>>> /usr/lib/libcrypto.35.dylib
+ >>>> /usr/lib/libcrypto.41.dylib
+ >>>> /usr/lib/libcrypto.42.dylib
+ >>>> /usr/lib/libcrypto.dylib
+ >>>> /usr/lib/libcsfde.dylib
+ >>>> /usr/lib/libcupolicy.dylib
+ >>>> /usr/lib/libcups.2.dylib
+ >>>> /usr/lib/libcups.dylib
+ >>>> /usr/lib/libcupscgi.1.dylib
+ >>>> /usr/lib/libcupscgi.dylib
+ >>>> /usr/lib/libcupsimage.2.dylib
+ >>>> /usr/lib/libcupsimage.dylib
+ >>>> /usr/lib/libcupsmime.1.dylib
+ >>>> /usr/lib/libcupsmime.dylib
+ >>>> /usr/lib/libcupsppdc.1.dylib
+ >>>> /usr/lib/libcupsppdc.dylib
+ >>>> /usr/lib/libcurl.3.dylib
+ >>>> /usr/lib/libcurl.4.dylib
+ >>>> /usr/lib/libcurl.dylib
+ >>>> /usr/lib/libcurses.dylib
+ >>>> /usr/lib/libdbm.dylib
+ >>>> /usr/lib/libdes425.dylib
+ >>>> /usr/lib/libdl.dylib
+ >>>> /usr/lib/libdns_services.dylib
+ >>>> /usr/lib/libdscsym.dylib
+ >>>> /usr/lib/libdtrace.dylib
+ >>>> /usr/lib/libdz.dylib
+ >>>> /usr/lib/libeasyperf.dylib
+ >>>> /usr/lib/libecpg.6.5.dylib
+ >>>> /usr/lib/libecpg.6.dylib
+ >>>> /usr/lib/libecpg.dylib
+ >>>> /usr/lib/libecpg_compat.3.5.dylib
+ >>>> /usr/lib/libecpg_compat.3.dylib
+ >>>> /usr/lib/libecpg_compat.dylib
+ >>>> /usr/lib/libedit.2.dylib
+ >>>> /usr/lib/libedit.3.0.dylib
+ >>>> /usr/lib/libedit.3.dylib
+ >>>> /usr/lib/libedit.dylib
+ >>>> /usr/lib/libenergytrace.dylib
+ >>>> /usr/lib/libexpat.1.dylib
+ >>>> /usr/lib/libexpat.dylib
+ >>>> /usr/lib/libexslt.0.dylib
+ >>>> /usr/lib/libexslt.dylib
+ >>>> /usr/lib/libextension.dylib
+ >>>> /usr/lib/libf77lapack.dylib
+ >>>> /usr/lib/libffi.dylib
+ >>>> /usr/lib/libform.5.4.dylib
+ >>>> /usr/lib/libform.dylib
+ >>>> /usr/lib/libgcc_s.1.dylib
+ >>>> /usr/lib/libgermantok.dylib
+ >>>> /usr/lib/libgmalloc.dylib
+ >>>> /usr/lib/libgssapi_krb5.dylib
+ >>>> /usr/lib/libgutenprint.2.dylib
+ >>>> /usr/lib/libheimdal-asn1.dylib
+ >>>> /usr/lib/libhunspell-1.2.0.0.0.dylib
+ >>>> /usr/lib/libhunspell-1.2.0.dylib
+ >>>> /usr/lib/libhunspell-1.2.dylib
+ >>>> /usr/lib/libiconv.2.4.0.dylib
+ >>>> /usr/lib/libiconv.2.dylib
+ >>>> /usr/lib/libiconv.dylib
+ >>>> /usr/lib/libicucore.A.dylib
+ >>>> /usr/lib/libicucore.dylib
+ >>>> /usr/lib/libinfo.dylib
+ >>>> /usr/lib/libiodbc.2.1.18.dylib
+ >>>> /usr/lib/libiodbc.2.dylib
+ >>>> /usr/lib/libiodbc.dylib
+ >>>> /usr/lib/libiodbcinst.2.1.18.dylib
+ >>>> /usr/lib/libiodbcinst.2.dylib
+ >>>> /usr/lib/libiodbcinst.dylib
+ >>>> /usr/lib/libipconfig.dylib
+ >>>> /usr/lib/libipsec.A.dylib
+ >>>> /usr/lib/libipsec.dylib
+ >>>> /usr/lib/libk5crypto.dylib
+ >>>> /usr/lib/libkrb4.dylib
+ >>>> /usr/lib/libkrb5.dylib
+ >>>> /usr/lib/libkrb524.dylib
+ >>>> /usr/lib/libkrb5support.dylib
+ >>>> /usr/lib/libktrace.dylib
+ >>>> /usr/lib/liblangid.dylib
+ >>>> /usr/lib/liblapack.dylib
+ >>>> /usr/lib/liblber.dylib
+ >>>> /usr/lib/libldap.dylib
+ >>>> /usr/lib/libldap_r.dylib
+ >>>> /usr/lib/liblzma.5.dylib
+ >>>> /usr/lib/liblzma.dylib
+ >>>> /usr/lib/libm.dylib
+ >>>> /usr/lib/libmarisa.dylib
+ >>>> /usr/lib/libmecab.1.0.0.dylib
+ >>>> /usr/lib/libmecab.dylib
+ >>>> /usr/lib/libmecabra.dylib
+ >>>> /usr/lib/libmenu.5.4.dylib
+ >>>> /usr/lib/libmenu.dylib
+ >>>> /usr/lib/libmx.A.dylib
+ >>>> /usr/lib/libmx.dylib
+ >>>> /usr/lib/libncurses.5.4.dylib
+ >>>> /usr/lib/libncurses.5.dylib
+ >>>> /usr/lib/libncurses.dylib
+ >>>> /usr/lib/libnetsnmp.15.1.2.dylib
+ >>>> /usr/lib/libnetsnmp.15.dylib
+ >>>> /usr/lib/libnetsnmp.25.dylib
+ >>>> /usr/lib/libnetsnmp.5.2.1.dylib
+ >>>> /usr/lib/libnetsnmp.5.dylib
+ >>>> /usr/lib/libnetsnmp.dylib
+ >>>> /usr/lib/libnetsnmpagent.25.dylib
+ >>>> /usr/lib/libnetsnmpagent.dylib
+ >>>> /usr/lib/libnetsnmphelpers.25.dylib
+ >>>> /usr/lib/libnetsnmphelpers.dylib
+ >>>> /usr/lib/libnettotal 95312
+-rwxr-xr-x   1 root  wheel     51520 May  4  2019 ACIPCBTLib.dylib
+-rwxr-xr-x   1 root  wheel    161312 May  4  2019 AppleConvergedTransport.dylib
+-rwxr-xr-x   1 root  wheel   1007520 May  4  2019 PN548.dylib
+-rwxr-xr-x   1 root  wheel    243472 May  4  2019 PN548_API.dylib
+-rwxr-xr-x   1 root  wheel     92768 May  4  2019 PN548_HAL.dylib
+-r--r--r--   1 root  wheel       198 Aug 18  2018 charset.alias
+lrwxr-xr-x   1 root  wheel        12 Jan 28  2019 cron -> ../../var/at
+drwxr-xr-x  13 root  wheel       416 Jan 16  2019 dtrace
+-rwxr-xr-x   1 root  wheel    973824 May  4  2019 dyld
+drwxr-xr-x   4 root  wheel       128 Aug 18  2018 groff
+-rwxr-xr-x   1 root  wheel    559232 May  4  2019 libATCommandStudioDynamic.dylib
+-rwxr-xr-x   1 root  wheel    224272 May  4  2019 libAccessibility.dylib
+-rwxr-xr-x   1 root  wheel     23280 May  4  2019 libAccountPolicyTranslation.dylib
+-rwxr-xr-x   1 root  wheel     39504 May  4  2019 libAppleSSEExt.dylib
+-rwxr-xr-x   1 root  wheel    154000 May  4  2019 libAppletTranslationLibrary.dylib
+-rwxr-xr-x   1 root  wheel    913440 May  4  2019 libAudioIssueDetector.dylib
+-rwxr-xr-x   1 root  wheel    158336 May  4  2019 libAudioStatistics.dylib
+-rwxr-xr-x   1 root  wheel     80976 May  4  2019 libBSDPClient.A.dylib
+lrwxr-xr-x   1 root  wheel        21 Jan 28  2019 libBSDPClient.dylib -> libBSDPClient.A.dylib
+-rwxr-xr-x   1 root  wheel    640240 May  4  2019 libCRFSuite.dylib
+lrwxr-xr-x   1 root  wheel        17 Jan 28  2019 libCRFSuite0.12.dylib -> libCRFSuite.dylibylib
+-rwxr-xr-x   1 root  wheel     29584 May  4  2019 libCTGreenTeaLogger.dylib
+-rwxr-xr-x   1 root  wheel    201664 May  4  2019 libChineseTokenizer.dylib
+-rwxr-xr-x   1 root  wheel   1468304 May  4  2019 libCoreStorage.dylib
+-rwxr-xr-x   1 root  wheel     32464 May  4  2019 libDHCPServer.A.dylib
+lrwxr-xr-x   1 root  wheel        21 Jan 28  2019 libDHCPServer.dylib -> libDHCPServer.A.dylib
+-rwxr-xr-x   1 root  wheel     57376 May  4  2019 libDiagnosticMessagesClient.dylib
+-rwxr-xr-x   1 root  wheel    568496 May  4  2019 libFDR_osx.dylib
+-rwxr-xr-x   1 root  wheel   5421872 May  4  2019 libFosl_dynamic.dylib
+-rwxr-xr-x   1 root  wheel    121680 May  4  2019 libIASAuthReboot.dylib
+-rwxr-xr-x   1 root  wheel    103632 May  4  2019 libIASUnifiedProgress.dylib
+-rwxr-xr-x   1 root  wheel    102096 May  4  2019 libMatch.1.dylib
+lrwxr-xr-x   1 root  wheel        16 Jan 28  2019 libMatch.dylib -> libMatch.1.dylibdylib
+-rwxr-xr-x   1 root  wheel     86480 May  4  2019 libMaxEnt.dylib
+-rwxr-xr-x   1 root  wheel    191952 May  4  2019 libMemoryResourceException.dylib
+-rwxr-xr-x   1 root  wheel    460272 May  4  2019 libMobileGestalt.dylib
+-rwxr-xr-x   1 root  wheel     43088 May  4  2019 libOpenScriptingUtil.dylib
+-rwxr-xr-x   1 root  wheel    810432 May  4  2019 libParallelCompression.dylib
+-rwxr-xr-x   1 root  wheel     87856 May  4  2019 libQMIParserDynamic.dylib
+-rwxr-xr-x   1 root  wheel   1901664 May  4  2019 libSMC.dylib
+-rwxr-xr-x   1 root  wheel    105440 May  4  2019 libScreenReader.dylib
+-rwxr-xr-x   1 root  wheel     60880 May  4  2019 libSystem.B.dylib
+lrwxr-xr-x   1 root  wheel        17 Jan 28  2019 libSystem.dylib -> libSystem.B.dylibylib
+-rwxr-xr-x   1 root  wheel   1148544 May  4  2019 libTelephonyUtilDynamic.dylib
+-rwxr-xr-x   1 root  wheel     58736 May  4  2019 libThaiTokenizer.dylib
+-rwxr-xr-x   1 root  wheel     41632 May  4  2019 libUniversalAccess.dylib
+-rwxr-xr-x   1 root  wheel     20960 May  4  2019 libXSEvent.dylib
+-rwxr-xr-x   1 root  wheel    181168 May  4  2019 libXplugin.1.dylib
+lrwxr-xr-x   1 root  wheel        18 Jan 28  2019 libXplugin.dylib -> libXplugin.1.dyliblib
+-rwxr-xr-x   1 root  wheel    279968 May  4  2019 libapple_nghttp2.dylib
+-rwxr-xr-x   1 root  wheel    343808 May  4  2019 libapr-1.0.dylib
+lrwxr-xr-x   1 root  wheel        16 Jan 28  2019 libapr-1.dylib -> libapr-1.0.dylibiblib
+-rwxr-xr-x   1 root  wheel    298032 May  4  2019 libaprutil-1.0.dylib
+lrwxr-xr-x   1 root  wheel        20 Jan 28  2019 libaprutil-1.dylib -> libaprutil-1.0.dylibb
+-rwxr-xr-x   1 root  wheel    434528 May  4  2019 libarchive.2.dylib
+lrwxr-xr-x   1 root  wheel        18 Jan 28  2019 libarchive.dylib -> libarchive.2.dylibibb
+-rwxr-xr-x   1 root  wheel   3066912 May  4  2019 libate.dylib
+-rwxr-xr-x   1 root  wheel     67936 May  4  2019 libauditd.0.dylib
+lrwxr-xr-x   1 root  wheel        17 Jan 28  2019 libauditd.dylib -> libauditd.0.dylibbibb
+-rwxr-xr-x   1 root  wheel     50528 May  4  2019 libauto.dylib
+lrwxr-xr-x   1 root  wheel       116 Jan 28  2019 libblas.dylib -> ../../System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+-rwxr-xr-x   1 root  wheel   1488080 May  4  2019 libboringssl.dylib
+-rwxr-xr-x   1 root  wheel    200320 May  4  2019 libbsm.0.dylib
+lrwxr-xr-x   1 root  wheel        14 Jan 28  2019 libbsm.dylib -> libbsm.0.dylibibrary/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+lrwxr-xr-x   1 root  wheel        16 Jan 28  2019 libbz2.1.0.5.dylib -> libbz2.1.0.dylibrary/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+-rwxr-xr-x   1 root  wheel    155552 May  4  2019 libbz2.1.0.dylib
+lrwxr-xr-x   1 root  wheel        16 Jan 28  2019 libbz2.dylib -> libbz2.1.0.dylibrary/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+-rwxr-xr-x   1 root  wheel   1432816 May  4  2019 libc++.1.dylib
+lrwxr-xr-x   1 root  wheel        14 Jan 28  2019 libc++.dylib -> libc++.1.dylibibrary/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+-rwxr-xr-x   1 root  wheel    339520 May  4  2019 libc++abi.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libc.dylib -> libSystem.dylibbrary/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+lrwxr-xr-x   1 root  wheel       116 Jan 28  2019 libcblas.dylib -> ../../System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+lrwxr-xr-x   1 root  wheel        18 Jan 28  2019 libcharset.1.0.0.dylib -> libcharset.1.dylibry/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+-r-xr-xr-x   1 root  wheel     43552 May  4  2019 libcharset.1.dylib
+lrwxr-xr-x   1 root  wheel        22 Jan 28  2019 libcharset.dylib -> libcharset.1.0.0.dylibrameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+lrwxr-xr-x   1 root  wheel       118 Jan 28  2019 libclapack.dylib -> ../../System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel    210080 May  4  2019 libcmph.dylib
+lrwxr-xr-x   1 root  wheel        54 Jan 28  2019 libcom_err.dylib -> /System/Library/Frameworks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel    380336 May  4  2019 libcompression.dylib
+-rwxr-xr-x   1 root  wheel   4187760 May  4  2019 libcoreroutine.dylib
+-rwxr-xr-x   1 root  wheel    271216 May  4  2019 libcoretls.dylib
+-rwxr-xr-x   1 root  wheel     60464 May  4  2019 libcoretls_cfhelpers.dylib
+-rwxr-xr-x   1 root  wheel   2015072 May  4  2019 libcrypto.0.9.7.dylib
+-rwxr-xr-x   1 root  wheel   2652560 May  4  2019 libcrypto.0.9.8.dylib
+-rwxr-xr-x   1 root  wheel   2793664 May  4  2019 libcrypto.35.dylib
+-rwxr-xr-x   1 root  wheel   2826656 May  4  2019 libcrypto.41.dylib
+-rwxr-xr-x   1 root  wheel   2826688 May  4  2019 libcrypto.42.dylib
+lrwxr-xr-x   1 root  wheel        18 Jan 28  2019 libcrypto.dylib -> libcrypto.35.dylibameworks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel    191328 May  4  2019 libcsfde.dylib
+-rwxr-xr-x   1 root  wheel     68896 May  4  2019 libcupolicy.dylib
+-r-xr-xr-x   1 root  wheel    917120 May  4  2019 libcups.2.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libcups.dylib -> libcups.2.dyliblibameworks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-r-xr-xr-x   1 root  wheel    125584 May  4  2019 libcupscgi.1.dylib
+lrwxr-xr-x   1 root  wheel        18 Jan 28  2019 libcupscgi.dylib -> libcupscgi.1.dylibameworks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-r-xr-xr-x   1 root  wheel     94576 May  4  2019 libcupsimage.2.dylib
+lrwxr-xr-x   1 root  wheel        20 Jan 28  2019 libcupsimage.dylib -> libcupsimage.2.dylibeworks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-r-xr-xr-x   1 root  wheel     74976 May  4  2019 libcupsmime.1.dylib
+lrwxr-xr-x   1 root  wheel        19 Jan 28  2019 libcupsmime.dylib -> libcupsmime.1.dylibbeworks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-r-xr-xr-x   1 root  wheel    243888 May  4  2019 libcupsppdc.1.dylib
+lrwxr-xr-x   1 root  wheel        19 Jan 28  2019 libcupsppdc.dylib -> libcupsppdc.1.dylibbeworks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libcurl.3.dylib -> libcurl.4.dylibylibbeworks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel    850096 May  4  2019 libcurl.4.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libcurl.dylib -> libcurl.4.dylibylibbeworks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        20 Jan 28  2019 libcurses.dylib -> libncurses.5.4.dylibeworks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libdbm.dylib -> libSystem.dylibdylibeworks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        54 Jan 28  2019 libdes425.dylib -> /System/Library/Frameworks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libdl.dylib -> libSystem.dylib/Frameworks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel     24656 May  4  2019 libdns_services.dylib
+-rwxr-xr-x   1 root  wheel     57408 May  4  2019 libdscsym.dylib
+-rwxr-xr-x   1 root  wheel   1286176 May  4  2019 libdtrace.dylib
+-rwxr-xr-x   1 root  wheel     77024 May  4  2019 libdz.dylib
+lrwxr-xr-x   1 root  wheel        18 Jan 28  2019 libeasyperf.dylib -> libperfcheck.dylibameworks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel     92512 May  4  2019 libecpg.6.5.dylib
+lrwxr-xr-x   1 root  wheel        17 Jan 28  2019 libecpg.6.dylib -> libecpg.6.5.dylibbameworks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        17 Jan 28  2019 libecpg.dylib -> libecpg.6.5.dylibbameworks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel     30928 May  4  2019 libecpg_compat.3.5.dylib
+lrwxr-xr-x   1 root  wheel        24 Jan 28  2019 libecpg_compat.3.dylib -> libecpg_compat.3.5.dylibks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        24 Jan 28  2019 libecpg_compat.dylib -> libecpg_compat.3.5.dylibks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libedit.2.dylib -> libedit.3.dylib3.5.dylibks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libedit.3.0.dylib -> libedit.3.dylib3.5.dylibks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel    308224 May  4  2019 libedit.3.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libedit.dylib -> libedit.3.dylib3.5.dylibks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel     42688 May  4  2019 libenergytrace.dylib
+-rwxr-xr-x   1 root  wheel    274736 May  4  2019 libexpat.1.dylib
+lrwxr-xr-x   1 root  wheel        16 Jan 28  2019 libexpat.dylib -> libexpat.1.dylib.5.dylibks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel    171872 May  4  2019 libexslt.0.dylib
+lrwxr-xr-x   1 root  wheel        16 Jan 28  2019 libexslt.dylib -> libexslt.0.dylib.5.dylibks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        74 Jan 28  2019 libextension.dylib -> ../../System/Library/Frameworks/Foundation.framework/Versions/C/Foundation/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel       118 Jan 28  2019 libf77lapack.dylib -> ../../System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel     47568 May  4  2019 libffi.dylib
+-rwxr-xr-x   1 root  wheel    115456 May  4  2019 libform.5.4.dylib
+lrwxr-xr-x   1 root  wheel        17 Jan 28  2019 libform.dylib -> libform.5.4.dylibary/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libgcc_s.1.dylib -> libSystem.dylibibary/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel     85936 May  4  2019 libgermantok.dylib
+-r-xr-xr-x   1 root  wheel     91872 May  4  2019 libgmalloc.dylib
+lrwxr-xr-x   1 root  wheel        54 Jan 28  2019 libgssapi_krb5.dylib -> /System/Library/Frameworks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        25 Jan 28  2019 libgutenprint.2.dylib -> libgutenprint.2.0.3.dylibs/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel     96768 May  4  2019 libheimdal-asn1.dylib
+-rwxr-xr-x   1 root  wheel    461312 May  4  2019 libhunspell-1.2.0.0.0.dylib
+lrwxr-xr-x   1 root  wheel        27 Jan 28  2019 libhunspell-1.2.0.dylib -> libhunspell-1.2.0.0.0.dylibKerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        27 Jan 28  2019 libhunspell-1.2.dylib -> libhunspell-1.2.0.0.0.dylibKerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        16 Jan 28  2019 libiconv.2.4.0.dylib -> libiconv.2.dylib0.0.0.dylibKerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-r-xr-xr-x   1 root  wheel   2095152 May  4  2019 libiconv.2.dylib
+lrwxr-xr-x   1 root  wheel        20 Jan 28  2019 libiconv.dylib -> libiconv.2.4.0.dylib0.dylibKerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel   6805264 May  4  2019 libicucore.A.dylib
+lrwxr-xr-x   1 root  wheel        18 Jan 28  2019 libicucore.dylib -> libicucore.A.dylibib0.dylibKerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libinfo.dylib -> libSystem.dyliblibib0.dylibKerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel    553248 May  4  2019 libiodbc.2.1.18.dylib
+lrwxr-xr-x   1 root  wheel        21 Jan 28  2019 libiodbc.2.dylib -> libiodbc.2.1.18.dylib.dylibKerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        21 Jan 28  2019 libiodbc.dylib -> libiodbc.2.1.18.dylib.dylibKerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel    154496 May  4  2019 libiodbcinst.2.1.18.dylib
+lrwxr-xr-x   1 root  wheel        25 Jan 28  2019 libiodbcinst.2.dylib -> libiodbcinst.2.1.18.dylibibKerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        25 Jan 28  2019 libiodbcinst.dylib -> libiodbcinst.2.1.18.dylibibKerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel     38976 May  4  2019 libipconfig.dylib
+-r-xr-xr-x   1 root  wheel     84736 May  4  2019 libipsec.A.dylib
+lrwxr-xr-x   1 root  wheel        16 Jan 28  2019 libipsec.dylib -> libipsec.A.dylib.18.dylibibKerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        54 Jan 28  2019 libk5crypto.dylib -> /System/Library/Frameworks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        54 Jan 28  2019 libkrb4.dylib -> /System/Library/Frameworks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        54 Jan 28  2019 libkrb5.dylib -> /System/Library/Frameworks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        54 Jan 28  2019 libkrb524.dylib -> /System/Library/Frameworks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        54 Jan 28  2019 libkrb5support.dylib -> /System/Library/Frameworks/Kerberos.framework/Kerberosersions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel     13632 May  4  2019 libktrace.dylib
+-rwxr-xr-x   1 root  wheel     52496 May  4  2019 liblangid.dylib
+lrwxr-xr-x   1 root  wheel       118 Jan 28  2019 liblapack.dylib -> ../../System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        57 Jan 28  2019 liblber.dylib -> /System/Library/Frameworks/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        57 Jan 28  2019 libldap.dylib -> /System/Library/Frameworks/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        57 Jan 28  2019 libldap_r.dylib -> /System/Library/Frameworks/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel    264384 May  4  2019 liblzma.5.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 liblzma.dylib -> liblzma.5.dylib/Frameworks/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libm.dylib -> libSystem.dylib/Frameworks/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel    288144 May  4  2019 libmarisa.dylib
+-rwxr-xr-x   1 root  wheel   1596512 May  4  2019 libmecab.1.0.0.dylib
+lrwxr-xr-x   1 root  wheel        20 Jan 28  2019 libmecab.dylib -> libmecab.1.0.0.dylibeworks/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel   4820080 May  4  2019 libmecabra.dylib
+-rwxr-xr-x   1 root  wheel     76320 May  4  2019 libmenu.5.4.dylib
+lrwxr-xr-x   1 root  wheel        17 Jan 28  2019 libmenu.dylib -> libmenu.5.4.dyliblibeworks/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libmx.A.dylib -> libSystem.dylibiblibeworks/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libmx.dylib -> libSystem.dylibiblibeworks/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel    518896 May  4  2019 libncurses.5.4.dylib
+lrwxr-xr-x   1 root  wheel        20 Jan 28  2019 libncurses.5.dylib -> libncurses.5.4.dylibeworks/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        20 Jan 28  2019 libncurses.dylib -> libncurses.5.4.dylibeworks/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel   1116224 May  4  2019 libnetsnmp.15.1.2.dylib
+lrwxr-xr-x   1 root  wheel        23 Jan 28  2019 libnetsnmp.15.dylib -> libnetsnmp.15.1.2.dylibrks/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel   1105808 May  4  2019 libnetsnmp.25.dylib
+-rwxr-xr-x   1 root  wheel    482288 May  4  2019 libnetsnmp.5.2.1.dylib
+lrwxr-xr-x   1 root  wheel        22 Jan 28  2019 libnetsnmp.5.dylib -> libnetsnmp.5.2.1.dylibbrks/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        19 Jan 28  2019 libnetsnmp.dylib -> libnetsnmp.25.dyliblibbrks/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel    673808 May  4  2019 libnetsnmpagent.25.dylib
+lrwxr-xr-x   1 root  wheel        24 Jan 28  2019 libnetsnmpagent.dylib -> libnetsnmpagent.25.dylibks/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel     34048 May  4  2019 libnetsnmphelpers.25.dylib
+lrwxr-xr-x   1 root  wheel        26 Jan 28  2019 libnetsnmphelpers.dylib -> libnetsnmphelpers.25.dylib/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel   1211776 May  4  2019 libnetsnmpmibs.25.dylib
+lrwxr-xr-x   1 root  wheel        23 Jan 28  2019 libnetsnmpmibs.dylib -> libnetsnmpmibs.25.dyliblib/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel    101840 May  4  2019 libnetsnmptrapd.25.dylib
+lrwxr-xr-x   1 root  wheel        24 Jan 28  2019 libnetsnmptrapd.dylib -> libnetsnmptrapd.25.dylibib/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel   7980448 May  4  2019 libnetwork.dylib
+-rwxr-xr-x   1 root  wheel     92512 May  4  2019 libnetworkextension.dylib
+-rwxr-xr-x   1 root  wheel    103408 May  4  2019 libnfrestore.dylib
+-rwxr-xr-x   1 root  wheel   1009328 May  4  2019 libnfshared.dylib
+-rwxr-xr-x   1 root  wheel     87744 May  4  2019 libobjc-trampolines.dylib
+-rwxr-xr-x   1 root  wheel  28112240 May  4  2019 libobjc.A.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libobjc.dylib -> libobjc.A.dylib.25.dylibib/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel     53824 May  4  2019 libodfde.dylib
+-rwxr-xr-x   1 root  wheel    151024 May  4  2019 libodmodule.dylib
+-rwxr-xr-x   1 root  wheel     52096 May  4  2019 libpam.1.dylib
+-rwxr-xr-x   1 root  wheel     85376 May  4  2019 libpam.2.dylib
+lrwxr-xr-x   1 root  wheel        14 Jan 28  2019 libpam.dylib -> libpam.2.dylibb.25.dylibib/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel     51552 May  4  2019 libpanel.5.4.dylib
+lrwxr-xr-x   1 root  wheel        18 Jan 28  2019 libpanel.dylib -> libpanel.5.4.dylib.dylibib/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel    542048 May  4  2019 libpcap.A.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libpcap.dylib -> libpcap.A.dyliblib.dylibib/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel    534992 May  4  2019 libpcre.0.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libpcre.dylib -> libpcre.0.dyliblib.dylibib/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel     43040 May  4  2019 libpcreposix.0.dylib
+lrwxr-xr-x   1 root  wheel        20 Jan 28  2019 libpcreposix.dylib -> libpcreposix.0.dylibylibib/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel     84688 May  4  2019 libperfcheck.dylib
+-rwxr-xr-x   1 root  wheel     78768 May  4  2019 libpgtypes.3.4.dylib
+lrwxr-xr-x   1 root  wheel        20 Jan 28  2019 libpgtypes.3.dylib -> libpgtypes.3.4.dylibylibib/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        20 Jan 28  2019 libpgtypes.dylib -> libpgtypes.3.4.dylibylibib/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel     32976 May  4  2019 libpmenergy.dylib
+-rwxr-xr-x   1 root  wheel     31984 May  4  2019 libpmsample.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libpoll.dylib -> libSystem.dylibdylibylibib/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel    178992 May  4  2019 libpq.5.6.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libpq.5.dylib -> libpq.5.6.dylibdylibylibib/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libpq.dylib -> libpq.5.6.dylibdylibylibib/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel    147888 May  4  2019 libprequelite.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libproc.dylib -> libSystem.dylibdylibylibib/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libpthread.dylib -> libSystem.dylibdylibylibib/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        18 Jan 28  2019 libpython.dylib -> libpython2.7.dylibibylibib/LDAP.framework/Versions/A/LDAPions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        68 Jan 28  2019 libpython2.7.dylib -> ../../System/Library/Frameworks/Python.framework/Versions/2.7/Pythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel    763136 May  4  2019 libquic.dylib
+-rwxr-xr-x   1 root  wheel     25520 May  4  2019 libquit.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libreadline.dylib -> libedit.3.dylibbrary/Frameworks/Python.framework/Versions/2.7/Pythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel    278144 May  4  2019 libresolv.9.dylib
+lrwxr-xr-x   1 root  wheel        17 Jan 28  2019 libresolv.dylib -> libresolv.9.dylibary/Frameworks/Python.framework/Versions/2.7/Pythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 librpcsvc.dylib -> libSystem.dylibibary/Frameworks/Python.framework/Versions/2.7/Pythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel    388992 May  4  2019 libruby.2.3.0.dylib
+lrwxr-xr-x   1 root  wheel        19 Jan 28  2019 libruby.2.3.dylib -> libruby.2.3.0.dyliby/Frameworks/Python.framework/Versions/2.7/Pythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        19 Jan 28  2019 libruby.dylib -> libruby.2.3.0.dyliby/Frameworks/Python.framework/Versions/2.7/Pythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel    669856 May  4  2019 libsandbox.1.dylib
+lrwxr-xr-x   1 root  wheel        18 Jan 28  2019 libsandbox.dylib -> libsandbox.1.dylibby/Frameworks/Python.framework/Versions/2.7/Pythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        16 Jan 28  2019 libsasl2.2.0.1.dylib -> libsasl2.2.dylibibby/Frameworks/Python.framework/Versions/2.7/Pythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        16 Jan 28  2019 libsasl2.2.0.15.dylib -> libsasl2.2.dylibibby/Frameworks/Python.framework/Versions/2.7/Pythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        16 Jan 28  2019 libsasl2.2.0.21.dylib -> libsasl2.2.dylibibby/Frameworks/Python.framework/Versions/2.7/Pythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        16 Jan 28  2019 libsasl2.2.0.22.dylib -> libsasl2.2.dylibibby/Frameworks/Python.framework/Versions/2.7/Pythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel    217040 May  4  2019 libsasl2.2.dylib
+lrwxr-xr-x   1 root  wheel        16 Jan 28  2019 libsasl2.dylib -> libsasl2.2.dylibibby/Frameworks/Python.framework/Versions/2.7/Pythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel     27040 May  4  2019 libspindump.dylib
+lrwxr-xr-x   1 root  wheel        16 Jan 28  2019 libsqlite3.0.dylib -> libsqlite3.dylibibby/Frameworks/Python.framework/Versions/2.7/Pythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel   6234688 May  4  2019 libsqlite3.dylib
+-rwxr-xr-x   1 root  wheel    392912 May  4  2019 libssl.0.9.7.dylib
+-rwxr-xr-x   1 root  wheel    642464 May  4  2019 libssl.0.9.8.dylib
+-rwxr-xr-x   1 root  wheel    624624 May  4  2019 libssl.35.dylib
+-rwxr-xr-x   1 root  wheel    599888 May  4  2019 libssl.43.dylib
+-rwxr-xr-x   1 root  wheel    569984 May  4  2019 libssl.44.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libssl.dylib -> libssl.35.dylibbibby/Frameworks/Python.framework/Versions/2.7/Pythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel   1417712 May  4  2019 libstdc++.6.0.9.dylib
+lrwxr-xr-x   1 root  wheel        21 Jan 28  2019 libstdc++.6.dylib -> libstdc++.6.0.9.dylibFrameworks/Python.framework/Versions/2.7/Pythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        17 Jan 28  2019 libstdc++.dylib -> libstdc++.6.dylibylibFrameworks/Python.framework/Versions/2.7/Pythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel     45168 May  4  2019 libsysdiagnose.dylib
+-rwxr-xr-x   1 root  wheel     29856 May  4  2019 libsysmon.dylib
+-rwxr-xr-x   1 root  wheel    113936 May  4  2019 libsystemstats.dylib
+-rwxr-xr-x   1 root  wheel    141456 May  4  2019 libtailspin.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libtcl.dylib -> libtcl8.5.dylibibylibFrameworks/Python.framework/Versions/2.7/Pythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        62 Jan 28  2019 libtcl8.5.dylib -> ../../System/Library/Frameworks/Tcl.framework/Versions/8.5/TclPythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        20 Jan 28  2019 libtermcap.dylib -> libncurses.5.4.dylib/Frameworks/Tcl.framework/Versions/8.5/TclPythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel    517936 May  4  2019 libtidy.A.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libtidy.dylib -> libtidy.A.dylibdylib/Frameworks/Tcl.framework/Versions/8.5/TclPythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        14 Jan 28  2019 libtk.dylib -> libtk8.5.dylibbdylib/Frameworks/Tcl.framework/Versions/8.5/TclPythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        60 Jan 28  2019 libtk8.5.dylib -> ../../System/Library/Frameworks/Tk.framework/Versions/8.5/TkclPythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel    125104 May  4  2019 libtls.15.dylib
+-rwxr-xr-x   1 root  wheel    130416 May  4  2019 libtls.16.dylib
+-rwxr-xr-x   1 root  wheel     75472 May  4  2019 libtls.6.dylib
+lrwxr-xr-x   1 root  wheel        14 Jan 28  2019 libtls.dylib -> libtls.6.dylibibrary/Frameworks/Tk.framework/Versions/8.5/TkclPythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel     65376 May  4  2019 libtzupdate.dylib
+-rwxr-xr-x   1 root  wheel    886896 May  4  2019 libusrtcp.dylib
+-rwxr-xr-x   1 root  wheel     82064 May  4  2019 libutil.dylib
+lrwxr-xr-x   1 root  wheel        13 Jan 28  2019 libutil1.0.dylib -> libutil.dylibbibrary/Frameworks/Tk.framework/Versions/8.5/TkclPythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel    188816 May  4  2019 libxar.1.dylib
+lrwxr-xr-x   1 root  wheel        14 Jan 28  2019 libxar.dylib -> libxar.1.dylibibrary/Frameworks/Tk.framework/Versions/8.5/TkclPythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel     34736 May  4  2019 libxcselect.dylib
+-rwxr-xr-x   1 root  wheel   2258000 May  4  2019 libxml2.2.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libxml2.dylib -> libxml2.2.dylibbrary/Frameworks/Tk.framework/Versions/8.5/TkclPythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel    441952 May  4  2019 libxslt.1.dylib
+lrwxr-xr-x   1 root  wheel        15 Jan 28  2019 libxslt.dylib -> libxslt.1.dylibbrary/Frameworks/Tk.framework/Versions/8.5/TkclPythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        12 Jan 28  2019 libz.1.1.3.dylib -> libz.1.dyliblibbrary/Frameworks/Tk.framework/Versions/8.5/TkclPythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        12 Jan 28  2019 libz.1.2.11.dylib -> libz.1.dyliblibbrary/Frameworks/Tk.framework/Versions/8.5/TkclPythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        12 Jan 28  2019 libz.1.2.5.dylib -> libz.1.dyliblibbrary/Frameworks/Tk.framework/Versions/8.5/TkclPythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+lrwxr-xr-x   1 root  wheel        12 Jan 28  2019 libz.1.2.8.dylib -> libz.1.dyliblibbrary/Frameworks/Tk.framework/Versions/8.5/TkclPythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel    186480 May  4  2019 libz.1.dylib
+lrwxr-xr-x   1 root  wheel        12 Jan 28  2019 libz.dylib -> libz.1.dyliblibbrary/Frameworks/Tk.framework/Versions/8.5/TkclPythoneworks/vecLib.framework/Versions/A/libLAPACK.dylib
+drwxr-xr-x  14 root  wheel       448 Jun  1  2019 log
+drwxr-xr-x  20 root  wheel       640 Jun  1  2019 pam
+drwxr-xr-x   4 root  wheel       128 Nov  8  2018 php
+drwxr-xr-x  11 root  wheel       352 Jan 16  2019 pkgconfig
+lrwxr-xr-x   1 root  wheel        75 Jan 28  2019 python2.7 -> ../../System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7vecLib.framework/Versions/A/libLAPACK.dylib
+drwxr-xr-x   9 root  wheel       288 Jun  1  2019 rpcsvc
+lrwxr-xr-x   1 root  wheel        76 Jan 28  2019 ruby -> ../../System/Library/Frameworks/Ruby.framework/Versions/Current/usr/lib/rubyecLib.framework/Versions/A/libLAPACK.dylib
+drwxr-xr-x  22 root  wheel       704 Jun  1  2019 sasl2
+lrwxr-xr-x   1 root  wheel        27 Jan 28  2019 sqlite3 -> /System/Library/Tcl/sqlite3orks/Ruby.framework/Versions/Current/usr/lib/rubyecLib.framework/Versions/A/libLAPACK.dylib
+-rwxr-xr-x   1 root  wheel     53824 May  4  2019 ssh-keychain.dylib
+drwxr-xr-x  49 root  wheel      1568 May  4  2019 swift
+drwxr-xr-x  42 root  wheel      1344 Jun  1  2019 system
+drwxr-xr-x   3 root  wheel        96 Dec 18  2018 xpc
+drwxr-xr-x   3 root  wheel        96 Aug 18  2018 zsh
+snmpmibs.25.dylib
+ >>>> /usr/lib/libnetsnmpmibs.dylib
+ >>>> /usr/lib/libnetsnmptrapd.25.dylib
+ >>>> /usr/lib/libnetsnmptrapd.dylib
+ >>>> /usr/lib/libnetwork.dylib
+ >>>> /usr/lib/libnetworkextension.dylib
+ >>>> /usr/lib/libnfrestore.dylib
+ >>>> /usr/lib/libnfshared.dylib
+ >>>> /usr/lib/libobjc-trampolines.dylib
+ >>>> /usr/lib/libobjc.A.dylib
+ >>>> /usr/lib/libobjc.dylib
+ >>>> /usr/lib/libodfde.dylib
+ >>>> /usr/lib/libodmodule.dylib
+ >>>> /usr/lib/libpam.1.dylib
+ >>>> /usr/lib/libpam.2.dylib
+ >>>> /usr/lib/libpam.dylib
+ >>>> /usr/lib/libpanel.5.4.dylib
+ >>>> /usr/lib/libpanel.dylib
+ >>>> /usr/lib/libpcap.A.dylib
+ >>>> /usr/lib/libpcap.dylib
+ >>>> /usr/lib/libpcre.0.dylib
+ >>>> /usr/lib/libpcre.dylib
+ >>>> /usr/lib/libpcreposix.0.dylib
+ >>>> /usr/lib/libpcreposix.dylib
+ >>>> /usr/lib/libperfcheck.dylib
+ >>>> /usr/lib/libpgtypes.3.4.dylib
+ >>>> /usr/lib/libpgtypes.3.dylib
+ >>>> /usr/lib/libpgtypes.dylib
+ >>>> /usr/lib/libpmenergy.dylib
+ >>>> /usr/lib/libpmsample.dylib
+ >>>> /usr/lib/libpoll.dylib
+ >>>> /usr/lib/libpq.5.6.dylib
+ >>>> /usr/lib/libpq.5.dylib
+ >>>> /usr/lib/libpq.dylib
+ >>>> /usr/lib/libprequelite.dylib
+ >>>> /usr/lib/libproc.dylib
+ >>>> /usr/lib/libpthread.dylib
+ >>>> /usr/lib/libpython.dylib
+ >>>> /usr/lib/libpython2.7.dylib
+ >>>> /usr/lib/libquic.dylib
+ >>>> /usr/lib/libquit.dylib
+ >>>> /usr/lib/libreadline.dylib
+ >>>> /usr/lib/libresolv.9.dylib
+ >>>> /usr/lib/libresolv.dylib
+ >>>> /usr/lib/librpcsvc.dylib
+ >>>> /usr/lib/libruby.2.3.0.dylib
+ >>>> /usr/lib/libruby.2.3.dylib
+ >>>> /usr/lib/libruby.dylib
+ >>>> /usr/lib/libsandbox.1.dylib
+ >>>> /usr/lib/libsandbox.dylib
+ >>>> /usr/lib/libsasl2.2.0.1.dylib
+ >>>> /usr/lib/libsasl2.2.0.15.dylib
+ >>>> /usr/lib/libsasl2.2.0.21.dylib
+ >>>> /usr/lib/libsasl2.2.0.22.dylib
+ >>>> /usr/lib/libsasl2.2.dylib
+ >>>> /usr/lib/libsasl2.dylib
+ >>>> /usr/lib/libspindump.dylib
+ >>>> /usr/lib/libsqlite3.0.dylib
+ >>>> /usr/lib/libsqlite3.dylib
+ >>>> /usr/lib/libssl.0.9.7.dylib
+ >>>> /usr/lib/libssl.0.9.8.dylib
+ >>>> /usr/lib/libssl.35.dylib
+ >>>> /usr/lib/libssl.43.dylib
+ >>>> /usr/lib/libssl.44.dylib
+ >>>> /usr/lib/libssl.dylib
+ >>>> /usr/lib/libstdc++.6.0.9.dylib
+ >>>> /usr/lib/libstdc++.6.dylib
+ >>>> /usr/lib/libstdc++.dylib
+ >>>> /usr/lib/libsysdiagnose.dylib
+ >>>> /usr/lib/libsysmon.dylib
+ >>>> /usr/lib/libsystemstats.dylib
+ >>>> /usr/lib/libtailspin.dylib
+ >>>> /usr/lib/libtcl.dylib
+ >>>> /usr/lib/libtcl8.5.dylib
+ >>>> /usr/lib/libtermcap.dylib
+ >>>> /usr/lib/libtidy.A.dylib
+ >>>> /usr/lib/libtidy.dylib
+ >>>> /usr/lib/libtk.dylib
+ >>>> /usr/lib/libtk8.5.dylib
+ >>>> /usr/lib/libtls.15.dylib
+ >>>> /usr/lib/libtls.16.dylib
+ >>>> /usr/lib/libtls.6.dylib
+ >>>> /usr/lib/libtls.dylib
+ >>>> /usr/lib/libtzupdate.dylib
+ >>>> /usr/lib/libusrtcp.dylib
+ >>>> /usr/lib/libutil.dylib
+ >>>> /usr/lib/libutil1.0.dylib
+ >>>> /usr/lib/libxar.1.dylib
+ >>>> /usr/lib/libxar.dylib
+ >>>> /usr/lib/libxcselect.dylib
+ >>>> /usr/lib/libxml2.2.dylib
+ >>>> /usr/lib/libxml2.dylib
+ >>>> /usr/lib/libxslt.1.dylib
+ >>>> /usr/lib/libxslt.dylib
+ >>>> /usr/lib/libz.1.1.3.dylib
+ >>>> /usr/lib/libz.1.2.11.dylib
+ >>>> /usr/lib/libz.1.2.5.dylib
+ >>>> /usr/lib/libz.1.2.8.dylib
+ >>>> /usr/lib/libz.1.dylib
+ >>>> /usr/lib/libz.dylib
+ >>>> /usr/lib/log
+ >>>> /usr/lib/pam
+ >>>> /usr/lib/php
+ >>>> /usr/lib/pkgconfig
+ >>>> /usr/lib/python2.7
+ >>>> /usr/lib/rpcsvc
+ >>>> /usr/lib/ruby
+ >>>> /usr/lib/sasl2
+ >>>> /usr/lib/sqlite3
+ >>>> /usr/lib/ssh-keychain.dylib
+ >>>> /usr/lib/swift
+ >>>> /usr/lib/system
+ >>>> /usr/lib/xpc
+ >>>> /usr/lib/zsh
+ >>>> /usr/lib/

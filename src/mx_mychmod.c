@@ -3,12 +3,15 @@
 char *mx_mychmod(int mode, char *str, char *dir_mame) {
     acl_t acl = NULL;
     ssize_t xattr = 0;
+    char buf[1024];
 
     mx_strcpy(str,"-----------");
-    xattr = listxattr(dir_mame, NULL, 0, XATTR_NOFOLLOW);
+    acl = acl_get_link_np(dir_mame, 256);
+    xattr = listxattr(dir_mame, buf, 0, XATTR_NOFOLLOW);
     if(S_ISDIR(mode))str[0]='d';
     if(S_ISCHR(mode))str[0]='c';
     if(S_ISBLK(mode))str[0]='b';
+    if(S_ISLNK(mode))str[0]= 'l';
     if(mode & S_IRUSR)str[1]='r';
     if(mode & S_IWUSR)str[2]='w';
     if(mode & S_IXUSR)str[3]='x';
@@ -18,13 +21,9 @@ char *mx_mychmod(int mode, char *str, char *dir_mame) {
     if(mode & S_IROTH)str[7]='r';
     if(mode & S_IWOTH)str[8]='w';
     if(mode & S_IXOTH)str[9]='x';
-    if (xattr < 0)
-        xattr = 0;
     if (xattr > 0)
         str[10] = '@';
-    else if (acl != NULL)
-        str[10] = '+';
     else
-        str[10] = ' ';
+        str[10] = (acl != NULL) ? '+' : ' ';
     return str;
 }

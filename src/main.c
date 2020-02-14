@@ -84,7 +84,7 @@ void mx_files_and_dir(char **file, t_flag *flags, int ac) {
 int main(int ac, char **av) {
     t_flag *flags = (t_flag *)malloc(sizeof(t_flag));
     char **file = NULL;
-    // printf("error");
+    
     mx_memset(flags, 0, sizeof(t_flag));
     file = mx_valid_flag(ac, av, flags); //files in argument
     if (file[0] == NULL) {
@@ -93,6 +93,6 @@ int main(int ac, char **av) {
     else {
         mx_files_and_dir(file, flags, ac);
     }
-    // system("leaks uls");
+    // system("leaks -q uls");
     return 0;
 }

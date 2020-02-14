@@ -8,6 +8,7 @@
 #include <fcntl.h>
 #include <malloc/malloc.h>
 
+void mx_bzero(void *s, size_t size);
 void mx_printchar(char c);
 void mx_print_unicode(wchar_t c);
 void mx_printstr(const char *s);
