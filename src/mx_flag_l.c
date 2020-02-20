@@ -1,5 +1,88 @@
 #include "uls.h"
 
+char *mx_long_to_hex(unsigned long long nbr) {  //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    unsigned long long n = nbr;
+    int len = 1;
+    char *res;
+
+    while (n / 16) {
+        len++;
+        n /= 16;
+    }
+    res = mx_strnew(len);
+    while (len--) {
+        res[len] = (nbr % 16 < 10) ? nbr % 16 + 48 : nbr % 16 + 87;
+        nbr /= 16;
+    }
+    return res;
+}
+
+
+void mx_bzero(void *s, size_t size) {
+    char *str = (char *)s;
+  
+    for (size_t i = 0; i < size; ++i)
+        str[i] = '\0';
+    str = NULL;
+}
+
+void mx_print_spaces(int n) {
+    for (; n > 0; n--)
+        mx_printchar(' ');
+}
+
+int mx_intlen(long long n) {
+    int i = 1;
+
+    for (; n > 9; i++)
+        n /= 10;
+    return i;
+}
+
+
+
+char *mx_mychmod(int mode, char *str, char *dir_mame) {
+    acl_t acl = NULL;
+    ssize_t xattr = 0;
+    char buf[1024];
+
+    mx_strcpy(str,"-----------");
+    acl = acl_get_link_np(dir_mame, 256);
+    xattr = listxattr(dir_mame, buf, 0, XATTR_NOFOLLOW);
+    if (S_ISDIR(mode))str[0] = 'd';
+    if (S_ISCHR(mode))str[0] = 'c';
+    if (S_ISBLK(mode))str[0] = 'b';
+    if (S_ISLNK(mode))str[0] =  'l';
+    if (mode & S_IRUSR)str[1] = 'r';
+    if (mode & S_IWUSR)str[2] = 'w';
+    if (mode & S_IXUSR)str[3] = 'x';
+    if (mode & S_IRGRP)str[4] = 'r';
+    if (mode & S_IWGRP)str[5] = 'w';
+    if (mode & S_IXGRP)str[6] = 'x';
+    if (mode & S_IROTH)str[7] = 'r';
+    if (mode & S_IWOTH)str[8] = 'w';
+    if (mode & S_IXOTH)str[9] = 'x';
+    if (xattr > 0)
+        str[10] = '@';
+    else
+        str[10] = (acl != NULL) ? '+' : ' ';
+    return str;
+}
+
+
+char* mx_substr(const char *src, int a, int b) {
+    int len = b - a;
+    char *dst = (char *)malloc(sizeof(char) * (len + 1));
+    
+    for (int i = a; i < b && src[i] != '\0'; i++) {
+        *dst = src[i];
+        dst++;
+    }
+    *dst = '\0';
+    return dst - len;
+}
+
+
 static void mx_itoa_to_string(unsigned int number, int n);
 
 void filling_struct(t_len_column *lens, struct stat buff) {
@@ -15,10 +98,11 @@ void filling_struct(t_len_column *lens, struct stat buff) {
     if (groupinfo != NULL) {
         if (lens->len_gid < mx_strlen(groupinfo->gr_name))
             lens->len_gid = mx_strlen(groupinfo->gr_name);
-        else if (lens->len_gid < mx_intlen(userinfo->pw_gid))
-                lens->len_gid = mx_intlen(userinfo->pw_gid);
     }
-
+    else { 
+        if (lens->len_gid < mx_intlen(userinfo->pw_gid))
+            lens->len_gid = mx_intlen(userinfo->pw_gid);
+    }
     if (lens->len_size < mx_intlen(buff.st_size))
        lens->len_size = mx_intlen(buff.st_size);
 }
@@ -42,51 +126,56 @@ void len_difference(t_diff_len *l, t_len_column *lens, struct stat buff) {
     if (groupinfo != NULL) {
         if (lens->len_gid >= mx_strlen(groupinfo->gr_name))
             l->diff_gid -= mx_strlen(groupinfo->gr_name);
-        else if (lens->len_gid >= mx_intlen(userinfo->pw_gid))
-            l->diff_gid -= mx_intlen(userinfo->pw_gid);
+    }
+    else {
+        if (lens->len_gid >= mx_intlen(userinfo->pw_gid))
+           l->diff_gid -= mx_intlen(userinfo->pw_gid);
     }
 }
 
-char **mx_find_path1(char **dirs_in, char *dir_name, int dir_count) {
+char **mx_find_path1(char **dirs_in, char *dir_name, int dir_count, t_flag *flags) {
+    if (flags->flag_a)
+        dir_count -= 2;
+    if (mx_strcmp(dir_name, ".") == 0)
+        return dirs_in;
     char **path = (char **)malloc(sizeof(char *) * (dir_count + 1));
     char *tmp = NULL;
-    if (dir_name == NULL)
-        return dirs_in;
-    for (int i = 0; i <= dir_count; i++) {
-        if (mx_strcmp(dir_name, "/") == 0)
-            tmp = mx_strdup(dir_name);
-        else
-            tmp = mx_strjoin(dir_name, "/");
-        path[i] = mx_strjoin(tmp, dirs_in[i]);
-        // printf(" >>>> %s\n", path[i]);
-        // printf(" >>>>%d\n", dir_count);
-        if (tmp != NULL)
-           free(tmp);
+    int j = 0;
+
+    if (mx_strcmp(dir_name, "..") != 0) {
+        for (int i = 0; dirs_in[i]; i++) {
+            if (mx_strcmp(dirs_in[i], ".") != 0 && mx_strcmp(dirs_in[i], "..") != 0) {
+                if (mx_strcmp(dir_name, "/") == 0)
+                    tmp = mx_strdup(dir_name);
+                else
+                    tmp = mx_strjoin(dir_name, "/");
+                path[j] = mx_strjoin(tmp, dirs_in[i]);
+                j++;
+                if (tmp != NULL)
+                    free(tmp);
+            }
+        }
     }
     path[dir_count] = NULL;
     return path;
 }
 
-void total_blocks(char **files_in_dir, t_len_column *lens, char *dir_name, int count) {
+void total_blocks(char **files_in_dir, t_len_column *lens, char *dir_name, int count, t_flag *flags) {
     struct stat buff;
     long long total = 0;
     char **path = NULL;
-
     mx_memset(lens, 0, sizeof(t_len_column));
-    if (dir_name != NULL)
-        path = mx_find_path1(files_in_dir, dir_name, count);
-
-        // printf("%s <<<<<<<<<<<<<<<<<\n\n", path[0]);
+    path = mx_find_path1(files_in_dir, dir_name, count, flags);
     for (int i = 0; path[i]; i++) {
-        // printf("%s\n", path[i]);
-        if (dir_name != NULL)
+        if (dir_name != NULL) {
             lstat(path[i], &buff);
+        } 
         else
-            lstat(files_in_dir[i], &buff); 
+            lstat(files_in_dir[i], &buff);
         filling_struct(lens, buff);
        	total += buff.st_blocks;
 
-    } 
+    }
     mx_printstr("total ");
     mx_printint(total);
     mx_printchar('\n');
@@ -95,16 +184,22 @@ void total_blocks(char **files_in_dir, t_len_column *lens, char *dir_name, int c
 void my_getgrgid(char *filename, int n) {
     struct group *groupinfo;
     struct stat buff;
+    char *str = NULL;
 
     lstat(filename, &buff);
     groupinfo = getgrgid(buff.st_gid);
     if (groupinfo != NULL) {
         mx_printstr(groupinfo->gr_name);
-        mx_print_spaces(n);
-        mx_print_spaces(1);
+        mx_print_spaces(n + 1);
+        // mx_print_spaces(1);
     }
-    else
-        mx_itoa_to_string(buff.st_gid, n);
+    else {
+        str = mx_itoa(buff.st_gid);
+        mx_printstr(str);
+        mx_print_spaces(n + 1);
+        free(str);
+        // mx_itoa_to_string(buff.st_gid, n);
+    }
 }
 
 void my_getuid(char *filename, int n) {
@@ -122,33 +217,51 @@ void my_getuid(char *filename, int n) {
     }
 }
 
-static void mx_itoa_to_string(unsigned int number, int n) {
+static void mx_itoa_to_string(unsigned int number, int otstup) {
 	char *str = mx_itoa(number);
 
-    mx_print_spaces(n);
+    mx_print_spaces(otstup);
 	mx_printstr(str);
 	mx_print_spaces(1);
 	free(str);
 }
 
-void my_time(char *filename) {
+char *time_T(time_t time, t_flag *flags) {
+    char *str;
+
+    if (flags->flag_T)
+        str = mx_substr(ctime(&(time)), 4, 24);
+    else
+       str = mx_substr(ctime(&(time)), 4, 16);
+    return str;
+}
+
+void my_time(char *filename, t_flag *flags) {
     struct stat *file_info = malloc(sizeof(struct stat));
     char *sub;
     time_t sec = time(NULL);
-    
+    time_t time = 0;
+
     lstat(filename, file_info);
-    if ((sec - (file_info->st_mtime)) > 15552000 || sec < 0) {
+    if (flags->flag_u) 
+        time = file_info->st_atime;
+    else if (flags->flag_c)
+        time = file_info->st_ctime;
+    else 
+        time = file_info->st_mtime;
+
+    if (((sec - (time)) > 15552000 || sec < 0 ) && !(flags->flag_T)) {
         sub = mx_substr(ctime(&(file_info->st_mtime)), 4, 10);
     	mx_printstr(sub);
     	free(sub);
     	mx_print_spaces(2);
-    	sub = mx_substr(ctime(&(file_info->st_mtime)), 20, 24);
+    	sub = mx_substr(ctime(&(time)), 20, 24);
     	mx_printstr(sub);
     	mx_print_spaces(1);
     	free(file_info);
     }
-    else {
-    	sub = mx_substr(ctime(&(file_info->st_mtime)), 4, 16);
+    else { 
+    	sub = time_T(time, flags);
     	mx_printstr(sub);
     	mx_print_spaces(1);
     	free(file_info);
@@ -156,20 +269,110 @@ void my_time(char *filename) {
     free(sub);
 }
 
+void my_readlink(char *str, char *filename) {
+    char ayaya[1024];
 
-void mx_flag_l(char **files_in_dir, int count, char *dir_name) {
+    if (str[0] == 'l') {
+        readlink(filename, ayaya, 1024);
+        if (ayaya[0] != '\0') {
+            mx_printstr(" -> ");            
+            mx_printstr(ayaya);
+        }
+        mx_bzero(ayaya, sizeof(ayaya));
+        ayaya[0] = '\0';
+    }
+    //free << may be
+}
+
+void mx_flag_sobaka(char *str, char *filename, t_flag *flags) { // <<<<<подключишь флажок
+    char pog_champ[1024];
+    size_t size_xat = 0;
+    if (str[10] == '@' && flags->flag_sobaka) {
+        if (listxattr(filename, pog_champ, 1024, 1) >= 0)
+        size_xat = getxattr(filename, pog_champ, 0, 1024, 0, 1);
+        mx_printchar('\n');
+        mx_print_spaces(8);
+        mx_printstr(pog_champ);
+        mx_print_spaces(6);
+        mx_printint(size_xat);
+    }
+}
+
+char *flag_h_check(double size, t_flag *flags) {
+    char *str = NULL;
+    char *tmp = NULL;
+    const char *format[] = {"B", "K", "M", "G", "T"};
+    int i = 0;
+    
+    if (flags->flag_h) {
+        while (size > 1024) {
+            size /= 1024.0;
+            i++;
+        }
+        str = mx_itoa(size);
+        tmp = mx_strjoin(str, format[i]);
+        free(str);
+    }
+    else
+        tmp = mx_itoa(size);
+    return tmp;   
+}
+
+void print_size(char *s, int n, t_flag *flags) {    
+    if (flags->flag_h) {
+        int len = mx_strlen(s);
+        int diff = 6 - len;
+
+        mx_print_spaces(diff);
+        mx_printstr(s);
+        mx_print_spaces(1);
+    }
+    else {
+        mx_print_spaces(n + 1);
+        mx_printstr(s);
+        mx_print_spaces(1);
+    }
+    free(s);
+}
+
+void print_major(t_len_column *lens, struct stat buff, int n, char *pr_dost, t_flag *flags) {
+    if (pr_dost[0] == 'c' || pr_dost[0] == 'b') {
+        lens->min = minor(buff.st_rdev);
+        lens->maj = major(buff.st_rdev);
+        int len_min = mx_intlen(lens->min);
+        int len_maj = mx_intlen(lens->maj);
+        int diff_maj = 4 - len_maj;
+        int diff_min = 4 - len_min;
+
+        mx_print_spaces(diff_maj);
+        mx_printint(lens->maj);
+        mx_printchar(',');
+        if (lens->min < 256) {
+            mx_print_spaces(diff_min);
+            mx_printint(lens->min);
+            mx_print_spaces(1);
+        }
+        else {
+            mx_print_spaces(1);
+            mx_printstr(mx_long_to_hex(lens->min));
+            mx_print_spaces(1);
+        }
+    }
+    else
+        print_size(flag_h_check(buff.st_size, flags), n, flags);
+}
+
+
+
+void mx_flag_l(char **files_in_dir, int count, char *dir_name, t_flag *flags) {
     char pr_dost[12];
-    char ayaya[1024]; // <3 twitch
     struct stat buff;
     t_len_column *lens = (t_len_column *)malloc(sizeof(t_len_column));
     t_diff_len *l = (t_diff_len *)malloc(sizeof(t_diff_len));
     char **path = NULL;
 
-    if (dir_name != NULL)
-        path = mx_find_path1(files_in_dir, dir_name, count);
-    else
-        path = mx_find_path1(files_in_dir, ".", 1);
-    total_blocks(files_in_dir, lens, dir_name, count);
+    path = mx_find_path1(files_in_dir, dir_name, count, flags);
+    total_blocks(files_in_dir, lens, dir_name, count, flags);
     for (int i = 0; path[i]; i++) {
         lstat(path[i], &buff);
         len_difference(l, lens, buff);
@@ -178,26 +381,15 @@ void mx_flag_l(char **files_in_dir, int count, char *dir_name) {
         mx_itoa_to_string(buff.st_nlink, l->diff_link);
         my_getuid(path[i], l->diff_user);
         my_getgrgid(path[i], l->diff_gid);
-        mx_itoa_to_string(buff.st_size, l->diff_size + 1);
-        my_time(path[i]);
+        print_major(lens, buff, l->diff_size, pr_dost, flags);
+        // print_size(flag_h_check(buff.st_size, flags),l->diff_size, flags);
+        my_time(path[i], flags);
         mx_printstr(files_in_dir[i]);
-        if (pr_dost[0] == 'l')
-            readlink(path[i], ayaya, 1024);
-        if (ayaya[0] != '\0') {
-            mx_printstr(" -> ");
-            mx_printstr(ayaya);
-        }
+        my_readlink(pr_dost, path[i]);
+        mx_flag_sobaka(pr_dost, path[i], flags);
         mx_printchar('\n');
-        mx_bzero(ayaya, sizeof(ayaya));
-        // ayaya[0] = '\0';
-        // bzero(lin, sizeof(lin));
+        // free(files_in_dir[i]);
+        // printf(" %d", lens->len_user);
     }
-        // printf("size link %d\n", lens->len_link);
-        // printf("size size %d\n", lens->len_size);
-        // printf("size user %d\n", lens->len_user);
-        // printf("size gid  %d || ",lens->len_gid);
-        // printf("diff gid  %d\n",l->diff_gid);
     // system("leaks uls");
 }
-
-

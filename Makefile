@@ -6,25 +6,24 @@ SRC = main.c \
 	mx_recursion_flag.c \
 	mx_basic_print.c \
 	mx_valid_flags.c \
-	mx_flag_m.c \
+	mx_print_flag.c \
 	mx_elem_in_dir.c \
+	mx_sort_flags.c \
+	mx_flag_G.c \
 	mx_flag_l.c \
-	mx_print_spaces.c \
-	mx_substr.c \
-	mx_intlen.c \
-	mx_mychmod.c \
+	mx_ftoa.c \
 
 OBJ = main.o \
 	mx_recursion_flag.o \
 	mx_basic_print.o \
 	mx_valid_flags.o \
-	mx_flag_m.o \
+	mx_print_flag.o \
 	mx_elem_in_dir.o \
+	mx_sort_flags.o \
+	mx_flag_G.o \
 	mx_flag_l.o \
-	mx_print_spaces.o \
-	mx_substr.o \
-	mx_intlen.o \
-	mx_mychmod.o \
+	mx_ftoa.o \
+
 
 CFLAGS = -std=c11 -Wall -Wextra -Werror -Wpedantic
 
