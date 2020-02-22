@@ -2,22 +2,56 @@
 #define ULS_H
 
 #include "libmx/inc/libmx.h"
-#include <sys/types.h>
-#include <errno.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <stdbool.h>
 #include <stdio.h>
-#include <dirent.h>
 #include <sys/stat.h>
 #include <sys/ioctl.h>
-#include <sys/acl.h>
-#include <sys/types.h>
-#include <sys/acl.h>
-#include <sys/xattr.h>
-#include <wchar.h>
+#include <err.h>
+#include <dirent.h>
+#include <malloc/malloc.h>
 #include <pwd.h>
 #include <grp.h>
-#include <errno.h>
-#include <err.h>
+#include <sys/acl.h>
+#include <sys/xattr.h>
+#include <time.h>
 
+#define O_RDWR          0x0002
+#define TIOCGWINSZ      _IOR('t', 104, struct winsize)  /* get window size */
+#define XATTR_NOFOLLOW   0x0001     /* Don't follow symbolic links */
+#define ACL_TYPE_EXTENDED   0x00000100
+#define IFMT 0170000
+#define IFIFO 0010000
+#define IFCHR 0020000
+#define IFDIR 0040000
+#define IFBLK 0060000
+#define IFREG 0100000
+#define IFLNK 0120000
+#define IFSOCK 0140000
+#define IRWXU 0000700
+#define IRUSR 0000400
+#define IWUSR 0000200
+#define IXUSR 0000100
+#define IRWXG 0000070
+#define IRGRP 0000040
+#define IWGRP 0000020
+#define IXGRP 0000010
+#define IRWXO 0000007
+#define IROTH 0000004
+#define IWOTH 0000002
+#define IXOTH 0000001
+#define ISUID 0004000
+#define ISGID 0002000
+#define ISVTX 0001000
+#define ISBLK(m) (((m) & IFMT) == IFBLK)
+#define ISCHR(m) (((m) & IFMT) == IFCHR)
+#define ISDIR(m) (((m) & IFMT) == IFDIR)
+#define ISFIFO(m) (((m) & IFMT) == IFIFO
+#define ISREG(m) (((m) & IFMT) == IFREG)
+#define ISLNK(m) (((m) & IFMT) == IFLNK)
+#define ISSOCK(m) (((m) & IFMT) == IFSOCK)
 #define major(x)        ((int32_t)(((u_int32_t)(x) >> 24) & 0xff))
 #define minor(x)        ((int32_t)((x) & 0xffffff))
 
@@ -42,6 +76,7 @@ typedef struct s_flag {
 	bool flag_sobaka;
 	bool flag_f;
 	bool flag_h;
+	bool flag_U;
 }				t_flag;
 
 typedef struct s_sort {
@@ -62,6 +97,7 @@ typedef struct s_len_column {
 	int len_time;
 	size_t min;
 	size_t maj;
+	bool bc;
 }				t_len_column;
 
 typedef struct s_diff_len {
@@ -90,7 +126,6 @@ void mx_basic_print(char **files_in_dir, int count, int max_len);
 
 char **mx_valid_flag(int ac, char **av, t_flag *flags);
 
-char *mx_ftoa(long double f); //<<<<<<<<<<<
 void mx_flag_m(char **files_in_dir, int count);
 void mx_flag_1(char **files_in_dir, int count);
 void mx_flag_G(char **files_in_dir, int count, char *file_name, t_flag *flags);
