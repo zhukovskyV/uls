@@ -11,16 +11,20 @@ void *mx_name_of_dir(char *s, int c) {
 	return s;
 }
 
-int mx_count_elem_in_dir(t_flag *flags, char *dir_name) {
+int mx_print_error(char *dir_name, int *err) {
+	*err = 1;
+	mx_printerr("uls: ");
+	perror(mx_name_of_dir(dir_name, '/'));
+	return 0;
+}
+
+int mx_count_elem_in_dir(t_flag *flags, char *dir_name, int *err) {
 	DIR *dir = opendir(dir_name);
 	struct dirent *entry;
 	int count = 0;
 
-	if (dir == NULL) {
-		mx_printerr("uls: ");
-	 	perror(mx_name_of_dir(dir_name, '/')); //ошибка Permission denied
-	 	return 0;
-	}
+	if (dir == NULL)
+		return mx_print_error(dir_name, err);
 	else {
 		while ((entry = readdir(dir)) != NULL) {
 			if (flags->flag_a == true || flags->flag_f)
@@ -34,7 +38,6 @@ int mx_count_elem_in_dir(t_flag *flags, char *dir_name) {
 		}
 	}	
 	closedir(dir);
-
 	return count;
 }
 
@@ -42,66 +45,42 @@ char **mx_make_mas_of_elem_in_dir(t_flag *flags, char *dir_name, int count) {
 	DIR *dir = opendir(dir_name);
 	struct dirent *entry;
 	int i = 0;
+	char **files_in_dir = (char **)malloc(sizeof(char *) * (count + 1));
 	
-	if (dir == NULL)
-		return NULL;
-	else {
-		char **files_in_dir = (char **)malloc(sizeof(char *) * (count + 1));
-		while ((entry = readdir(dir)) != NULL) {
-			if (flags->flag_a == true || flags->flag_f)
-				files_in_dir[i++] = mx_strdup(entry->d_name);
-			else if (flags->flag_A == true) {
-				if (entry->d_name[1] != '.' && entry->d_name[1] != '\0')
-					files_in_dir[i++] = mx_strdup(entry->d_name);
-			}
-			else if (entry->d_name[0] != '.')
+	while ((entry = readdir(dir)) != NULL) 
+		if (flags->flag_a == true || flags->flag_f)
+			files_in_dir[i++] = mx_strdup(entry->d_name);
+		else if (flags->flag_A == true) {
+			if (entry->d_name[1] != '.' && entry->d_name[1] != '\0')
 				files_in_dir[i++] = mx_strdup(entry->d_name);
 		}
-		files_in_dir[i] = NULL;
-		closedir(dir);
-		return files_in_dir;
-	}
-	return NULL;
+		else if (entry->d_name[0] != '.')
+			files_in_dir[i++] = mx_strdup(entry->d_name);
+	files_in_dir[i] = NULL;
+	closedir(dir);
+	return files_in_dir;
 }
 
+void mx_current_directory(t_flag *flags, char *dir_name, int *err) {
+	int count = mx_count_elem_in_dir(flags, dir_name, err);
+	bool buf = true;
 
-void mx_current_directory(t_flag *flags, char *dir_name) {
-	int count = mx_count_elem_in_dir(flags, dir_name);
-	char **files_in_dir = mx_make_mas_of_elem_in_dir(flags, dir_name, count);
-
-	if (!flags->flag_f) {
-		mx_bubble_sort(files_in_dir, count);
-	
-		if (flags->flag_S)
-			mx_sort_S(files_in_dir, count, dir_name, flags);
-		else if (flags->flag_t)
-			mx_sort_t(files_in_dir, count, dir_name, flags);
+	if (count != 0) {
+		char **files_in_dir = mx_make_mas_of_elem_in_dir(flags, dir_name,
+		count);
 		
-		if (flags->flag_r)
-			mx_sort_r(files_in_dir, count);
+		mx_sort_flags(flags, files_in_dir, count, dir_name);
+		mx_print_flags(flags, files_in_dir, count, dir_name, 0);
+		if (flags->flag_R && !(flags->flag_f)) {
+			char **path = mx_make_path(files_in_dir, dir_name, &count, flags);
+			int dir_count = mx_dir_count(path, flags);
+			char **dirs_in = mx_make_mas_of_dirs(dir_count, path, count,
+				flags);
+			
+			mx_del_strarr(&path);
+			mx_recursion_flag(dirs_in, flags, buf, err);
+			mx_del_strarr(&dirs_in);
+		}
+		mx_del_strarr(&files_in_dir);
 	}
-	if (flags->flag_m) {
-		mx_flag_m(files_in_dir, count);
-		mx_printchar('\n');
-	}
-	else if (flags->flag_1) {
-		mx_flag_1(files_in_dir, count);
-	}
-	else if (flags->flag_G)
-		mx_flag_G(files_in_dir, count, dir_name, flags);
-	else if (flags->flag_l)
-		mx_flag_l(files_in_dir, count, dir_name, flags);
-	else {
-		int max_len = mx_count_max_len(files_in_dir);
-		mx_basic_print(files_in_dir, count, max_len);
-	}
-	if (flags->flag_R) {
-		mx_printchar('\n');
-		char **path = mx_make_path(files_in_dir, dir_name, count, flags);
-		int dir_count = mx_dir_count(path);
-		char **dirs_in = mx_make_mas_of_dirs(dir_count, path, count);
-		mx_recursion_flag(dirs_in, dir_count, flags);
-	}
-	mx_del_strarr(&files_in_dir);
-
 }
